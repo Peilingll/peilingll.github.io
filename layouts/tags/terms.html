@@ -1,0 +1,40 @@
+{{ define "main" }}
+<main class="min-h-screen bg-white">
+  <div class="max-w-5xl mx-auto px-6 py-16">
+    <h1 class="text-3xl font-bold mb-10">All Tags</h1>
+    
+    <div class="flex flex-wrap gap-3">
+      {{/* 先找出最大計數值用於計算顏色深度 */}}
+      {{ $maxCount := 1 }}
+      {{ range .Data.Terms.Alphabetical }}
+        {{ if gt .Count $maxCount }}
+          {{ $maxCount = .Count }}
+        {{ end }}
+      {{ end }}
+      
+      {{ range .Data.Terms.Alphabetical }}
+        {{/* 根據計數計算顏色強度 */}}
+        {{ $intensity := div (mul .Count 500) $maxCount }}
+        {{ if lt $intensity 100 }}{{ $intensity = 100 }}{{ end }}
+        {{ if gt $intensity 500 }}{{ $intensity = 500 }}{{ end }}
+        
+        <a href="{{ .Page.RelPermalink }}" 
+           class="px-4 py-2 rounded-full transition-all hover:scale-105
+                  {{ if gt .Count 8 }}
+                    bg-purple-400 text-white hover:bg-purple-600
+                  {{ else if gt .Count 5 }}
+                    bg-purple-300 text-white hover:bg-purple-500
+                  {{ else if gt .Count 3 }}
+                    bg-purple-200 text-white hover:bg-purple-400
+                  {{ else if gt .Count 1 }}
+                    bg-purple-100 hover:bg-purple-300
+                  {{ else }}
+                    bg-purple-50 hover:bg-purple-200
+                  {{ end }}">
+          #{{ .Page.Title }} ({{ .Count }})
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</main>
+{{ end }}

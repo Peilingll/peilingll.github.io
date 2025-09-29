@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Architecture on PEILING SONG</title>
+    <link>http://localhost:1313/tags/architecture/</link>
+    <description>Recent content in Architecture on PEILING SONG</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BIM.Fundamentals Modeling Task</title>
+      <link>http://localhost:1313/projects/project7/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/project7/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This project was part of the SS25 BIM Fundamental Course, aimed at developing a deeper understanding of the potential of Building Information Modeling (BIM) and the structure of the IFC schema. The assignment required us to create a semantically enriched and detailed BIM model, acting simultaneously as designers and engineers. We carefully examined the structure, appearance, and material definitions of the model, ensuring semantic accuracy and consistency throughout. This process not only strengthened our modeling skills but also provided us with a solid foundation in comprehending the logic and framework of IFC-based data representation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Portfolio-Interwoven Space</title>
+      <link>http://localhost:1313/projects/project10/</link>
+      <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/project10/</guid>
+      <description>&lt;p&gt;This portfolio showcases my efforts to bridge architecture with interior design. They are not merely functional areas but storytelling venues, where every detail captivates and educates us about society, culture, and the environment. These works reflect my belief that creating spaces that not only integrate internally and externally but also provoke thought and evoke emotions.&lt;/p&gt;&#xA;&lt;p&gt;This portfolio is a reflection upon my design practice, displaying how a profound understanding of light, texture, and innovative technologies can be used to create spaces that are both beautiful and meaningful. It is a declaration of the values I hold dear: a design philosophy that emphasizes the narrative power of spaces, social engagement, and a deep respect for the land, while embracing digital innovation to address the challenges of the built environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2023 CAAD Workshop - RhinoVAULT Application</title>
+      <link>http://localhost:1313/projects/project8/</link>
+      <pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/project8/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This workshop introduces the role of digital technology in contemporary architecture, focusing on the development and application of CAD/CAM tools, vibrating knife systems, and CNC technology. Participants will first explore the theoretical foundations, including how these tools transform the architectural design process. They will then gain hands-on experience, from CAD-based part design to operating vibrating knife and CNC machines for model making, working in groups to create small-scale structural prototypes. Finally, the workshop examines real-world cases, current challenges, and future trends, encouraging innovative thinking, critical discussion, and strategies for integrating digital fabrication technologies into architectural practice.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2021 CAAD Workshop - KUKA Robotic Arm</title>
+      <link>http://localhost:1313/projects/project9/</link>
+      <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/project9/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In the “KUKA Robotic Arm Workshop,” participants will learn to set up and operate a KUKA robotic arm, focusing on essential safety and operational guidelines. The workshop includes an introduction to basic programming, allowing attendees to understand and manipulate the arm’s controls.&lt;/p&gt;&#xA;&lt;p&gt;A key feature of the session is a hands-on exercise in robotic weaving, showcasing the arm’s precision and potential in digital manufacturing and design. This concise yet comprehensive workshop is an ideal introduction to the possibilities of robotic automation in creative and industrial applications.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

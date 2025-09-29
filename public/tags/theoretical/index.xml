@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Theoretical on PEILING SONG</title>
+    <link>http://localhost:51633/tags/theoretical/</link>
+    <description>Recent content in Theoretical on PEILING SONG</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:51633/tags/theoretical/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Scheduling Duration and Target Dates – Fundamentals</title>
+      <link>http://localhost:51633/projects/project5/</link>
+      <pubDate>Wed, 09 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:51633/projects/project5/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This experimental report is part of the System-Theoretical Principles of Project Management course, focusing on how system-theoretical methods can be applied to analyze project scheduling and verify the impact of different strategies on project duration and resource allocation. We began by modeling project activities as a causal network and conducting scheduling analysis to identify the critical path and overall project duration, which served as the baseline for subsequent scenario comparisons. We then designed and compared three different scheduling strategies to examine how variations in resource allocation influence project duration and constrained conditions. Finally, we simulated different scheduling flexibility settings by adjusting the strength of boundary conditions to observe the effects of task concentration versus dispersion, thereby exploring their impact on project stability and efficiency.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

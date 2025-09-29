@@ -1,0 +1,38 @@
+baseURL = 'https://peilingsong.org/'
+languageCode = 'en-us'
+title = 'PEILING SONG'
+
+[build]
+  [build.buildStats]
+    enable = true
+  [[build.cachebusters]]
+    source = 'assets/notwatching/hugo_stats\.json'
+    target = 'css'
+  [[build.cachebusters]]
+    source = '(postcss|tailwind)\.config\.js'
+    target = 'css'
+
+[module]
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    disableWatch = true
+    source = 'hugo_stats.json'
+    target = 'assets/notwatching/hugo_stats.json'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[taxonomies]
+  tag = "tags"
+
+
+# Hero 動畫配置（優化版）
+[params]
+  [params.hero]
+    useGSAP = true                    # 啟用/停用 GSAP 特效
+    animationSpeed = 1                # 動畫速度倍數
+    enableParallax = false            # 視差效果（可選）

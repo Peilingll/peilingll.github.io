@@ -1,0 +1,60 @@
+<!-- about.html - About Section with Photo Modal -->
+<section id="about" class="py-16 bg-white">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl text-center mb-12 text-gray-700 tracking-wider">ABOUT ME</h2>
+    
+    <!-- Profile Photo -->
+    <div class="flex justify-center mb-6">
+      <img 
+        src="/images/profile.webp" 
+        alt="Peiling Song" 
+        class="w-56 h-56 rounded-full object-cover shadow-lg cursor-pointer"
+        onclick="openImageModal(this.src)"
+      >
+    </div>
+    
+    <!-- Name -->
+    <h3 class="text-2xl text-center mb-4 text-gray-700 tracking-wider">PEILING SONG | 宋沛翎</h3>
+    
+    <!-- Description -->
+    <p class="text-gray-600 text-center max-w-3xl mx-auto mb-8 leading-relaxed">
+      I am a Master's student in <a href="https://www.ed.tum.de/ed/studium/studienangebot/information-technologies-for-the-built-environment-m-sc/" style="color: #7e6afc; text-decoration: underline;" target="_blank">ITBE@TUM</a>, 
+      focusing on BIM, semantic modeling, and API development. Experienced in automation, 
+      point cloud processing, IoT integration, and real-time visualization to support 
+      decision-making across the building lifecycle and advance AEC digitalization.
+    </p>
+    
+    <!-- Social Links -->
+    <div class="flex justify-center gap-4">
+      <a href="https://www.linkedin.com/in/peiling-song" target="_blank" class="text-gray-600 hover:text-[#7e6afc] transition-colors">
+        <i class="fab fa-linkedin text-2xl"></i>
+      </a>
+      <a href="mailto:peiling.song@tum.de" class="text-gray-600 hover:text-[#7e6afc] transition-colors">
+        <i class="fas fa-envelope text-2xl"></i>
+      </a>
+      <a href="https://github.com/Peilingll" target="_blank" class="text-gray-600 hover:text-[#7e6afc] transition-colors">
+        <i class="fab fa-github text-2xl"></i>
+      </a>
+      <a href="/documents/Resume_SONG_PEI_LING.pdf" target="_blank" class="text-gray-600 hover:text-[#7e6afc] transition-colors">
+        <i class="fas fa-file-pdf text-2xl"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Image Modal -->
+<div id="imageModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-75 flex items-center justify-center p-4" onclick="closeImageModal()">
+  <img id="modalImage" src="" alt="Enlarged view" class="max-w-full max-h-[90vh] object-contain rounded-lg">
+</div>
+
+<!-- JavaScript for Modal -->
+<script>
+function openImageModal(src) {
+  document.getElementById('imageModal').classList.remove('hidden');
+  document.getElementById('modalImage').src = src;
+}
+
+function closeImageModal() {
+  document.getElementById('imageModal').classList.add('hidden');
+}
+</script>

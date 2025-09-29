@@ -1,0 +1,39 @@
+.char{display:inline-block;position:relative;transition:letter-spacing .4s ease,transform .4s ease}.bg-text.typing-active{overflow:hidden;white-space:nowrap}.bg-text.flicker{animation:randomFlicker .3s ease-in-out}@keyframes randomFlicker{0%,100%{opacity:.8}25%{opacity:.3}50%{opacity:1}75%{opacity:.5}}.main-text{opacity:0;transform:translateY(50px);animation:textReveal 1.2s cubic-bezier(.86,0,.07,1)forwards}.main-text-row:nth-child(1) .main-text{animation-delay:.2s}.main-text-row:nth-child(2) .main-text{animation-delay:.4s}.main-text-row:nth-child(3) .main-text{animation-delay:.6s}@keyframes textReveal{0%{opacity:0;transform:translateY(50px)}100%{opacity:1;transform:translateY(0)}}.bg-text{opacity:0;transform:scale(.9);animation:bgTextReveal 1s ease-out forwards}@keyframes bgTextReveal{0%{opacity:0;transform:scale(.9)}100%{opacity:.8;transform:scale(1)}}.bg-text:nth-child(1){animation-delay:.3s}.bg-text:nth-child(2){animation-delay:.5s}.bg-text:nth-child(3){animation-delay:.7s}.bg-text:nth-child(4){animation-delay:.9s}.bg-text:nth-child(5){animation-delay:1.1s}.main-text,.bg-text{will-change:transform,opacity;transform:translateZ(0);backface-visibility:hidden}.hero-container *{box-sizing:border-box}@layer utilities{.animate-first  { animation: moveVertical 30s ease infinite; }
+  .animate-second { animation: moveCircle 20s linear infinite; }
+  .animate-third  { animation: moveCircle 40s linear infinite reverse; }
+  .animate-fourth { animation: moveHorizontal 40s ease infinite; }
+  .animate-fifth  { animation: moveCircle 25s ease-in-out infinite; }
+
+  @keyframes moveHorizontal {
+    0%   { transform: translateX(-50%) translateY(-10%); }
+    50%  { transform: translateX(50%) translateY(10%); }
+    100% { transform: translateX(-50%) translateY(-10%); }
+  }
+
+  @keyframes moveVertical {
+    0%   { transform: translateY(-50%); }
+    50%  { transform: translateY(50%); }
+    100% { transform: translateY(-50%); }
+  }
+
+  
+  @keyframes moveCircle {
+    0%   { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+  }
+
+  @layer utilities {
+    .float {
+      animation: floatAround 12s ease-in-out infinite alternate;
+    }
+  
+    @keyframes floatAround {
+      0%   { transform: translate(0px, 0px); }
+      25%  { transform: translate(30px, -20px); }
+      50%  { transform: translate(-20px, 40px); }
+      75%  { transform: translate(-40px, -30px); }
+      100% { transform: translate(0px, 0px); }
+    }
+  }
+  
+}@media(max-width:768px){.bg-text.typing-active{animation-duration:1.5s}}@media(prefers-reduced-motion:reduce){.main-text,.bg-text{animation-duration:.3s}.char{transition-duration:.1s}}

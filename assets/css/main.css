@@ -1,0 +1,396 @@
+@import "tailwindcss";
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ----------- Custom Prose Styles ----------- */
+.prose h2 {
+  font-size: 1.5rem;   /* text-2xl */
+  font-weight: 700;    /* bold */
+  margin-top: 2rem;    /* mt-8 */
+  margin-bottom: 1rem; /* mb-4 */
+  color: #111827;      /* text-gray-900 */
+}
+
+.prose p {
+  text-align: justify; /* 內文左右齊邊對齊 */
+}
+
+.prose img {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.5rem; /* 圖片圓角 */
+}
+
+.prose img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  width: 75%; /* 控制大小 */
+  border-radius: 0.5rem;
+}
+
+.prose h3 {
+  font-size: 1.25rem;   /* text-xl */
+  font-weight: 600;     /* semi-bold */
+  margin-top: 1.5rem;   /* mt-6 */
+  margin-bottom: 0.75rem; /* mb-3 */
+  color: #1f2937;       /* text-gray-800 */
+}
+
+
+/* ----------- 控制圖片大小 + 小標 ----------- */
+.prose em {
+  display: block;
+  text-align: center;
+  font-size: 0.875rem; /* text-sm */
+  color: #6B7280; /* text-gray-500 */
+  margin-top: 0.5rem;
+}
+
+#lightbox-overlay {
+  display: none;
+}
+
+#lightbox-overlay.active {
+  display: flex;
+}
+
+/* ----------- 控制項目符號 ----------- */
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+  color: #686c76;
+}
+
+.prose ul li {
+  margin-bottom: 0.5rem;   /* 行距 */
+  line-height: 1.6;        /* 更好閱讀 */
+}
+
+.prose a {
+  color: #7e6afc;          /* Tailwind blue-600 */
+  text-decoration: underline;
+  text-underline-offset: 3px;  /* 下劃線離字遠一點 */
+  font-weight: 500;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+  color: #686c76;
+}
+
+.prose ol li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* ----------- 移動端優化 ----------- */
+   
+   /* === 移動端背景小字修復 === */
+   @media (max-width: 768px) {
+     .bg-text {
+       font-size: 12px !important;
+       opacity: 0.4;
+       letter-spacing: 0.5px;
+     }
+     
+     /* 確保小字在安全區域內 */
+     .background-text-container {
+       padding: 200px 5px 5px 5px; /* 上方留出 header 空間 */
+     }
+     
+     .background-text-container .bg-text:nth-child(1) { 
+      top: 45%; left: 10%;  /* Machine Learning */
+    }
+    .background-text-container .bg-text:nth-child(2) { 
+      top: 32%; right: 5%; /* Data Science */
+    }
+    .background-text-container .bg-text:nth-child(3) { 
+      top: 38%; right: 20%;  /* BIM */
+    }
+    .background-text-container .bg-text:nth-child(4) { 
+      bottom: 30%; right: 12%; /* Semantic Modeling */
+    }
+    .background-text-container .bg-text:nth-child(5) { 
+      bottom: 20%; left: 10%; /* Internet of Things */
+    }
+    
+    /* 新增 6-10 */
+    .background-text-container .bg-text:nth-child(6) { 
+      top: 28%; right: 15%; /* Digital Twin */
+    }
+    .background-text-container .bg-text:nth-child(7) { 
+      top: 55%; left: 20%;  /* Smart Building */
+    }
+    .background-text-container .bg-text:nth-child(8) { 
+      bottom: 25%; left: 25%; /* Thermal Comfort */
+    }
+    .background-text-container .bg-text:nth-child(9) { 
+      bottom: 1%; right: 20%; /* Robotics */
+    }
+    .background-text-container .bg-text:nth-child(10) { 
+      bottom: 1%; right: 25%; /* Simulation */
+    }
+   }
+   
+   /* === 漢堡選單樣式 === */
+   .hamburger-menu {
+     display: none;
+     background: none;
+     border: none;
+     cursor: pointer;
+     padding: 5px;
+     z-index: 1001;
+   }
+   
+   .hamburger-menu span {
+     display: block;
+     width: 25px;
+     height: 2px;
+     background: #333;
+     margin: 5px 0;
+     transition: all 0.3s;
+   }
+   
+   /* 漢堡選單動畫 */
+   .hamburger-menu.active span:nth-child(1) {
+     transform: rotate(45deg) translate(5px, 5px);
+   }
+   
+   .hamburger-menu.active span:nth-child(2) {
+     opacity: 0;
+   }
+   
+   .hamburger-menu.active span:nth-child(3) {
+     transform: rotate(-45deg) translate(7px, -6px);
+   }
+   
+   /* 移動端導航選單 */
+   @media (max-width: 768px) {
+     .hamburger-menu {
+       display: block;
+     }
+     
+     header nav {
+       display: none;
+       position: fixed;
+       top: 60px;
+       left: 0;
+       right: 0;
+       background: rgba(255, 255, 255, 0.90);
+       backdrop-filter: blur(10px);
+       flex-direction: column;
+       padding: 1rem;
+       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+       z-index: 1000;
+     }
+     
+     header nav.active {
+       display: flex;
+     }
+     
+     header nav a {
+       padding: 0.75rem 1rem;
+       border-bottom: 1px solid #f0f0f0;
+       font-size: 1rem;
+       transition: background 0.3s;
+     }
+     
+     header nav a:hover {
+       background: #f8f8f8;
+     }
+     
+     header nav a:last-child {
+       border-bottom: none;
+     }
+   }
+   
+   /* === 主要大字避免被遮擋 === */
+   @media (max-width: 768px) {
+     .main-text-container {
+       padding: 80px 20px 20px 20px; /* 上方留更多空間給 header */
+     }
+     
+     .main-text-wrapper {
+       gap: 25px;
+       width: 100%;
+     }
+     
+     .main-text {
+       font-size: 2.2rem;
+       letter-spacing: 1px;
+     }
+     
+     .main-text-row {
+       height: 55px;
+       justify-content: center !important;
+     }
+     
+     /* 確保文字居中不偏移 */
+     .main-text-row[data-id="engineering"],
+     .main-text-row[data-id="architecture"], 
+     .main-text-row[data-id="informatic"] {
+       margin-left: 0 !important;
+       text-align: center;
+       width: 100%;
+     }
+   }
+   
+   /* === 更小螢幕優化 === */
+   @media (max-width: 480px) {
+     .main-text {
+       font-size: 1.8rem;
+       letter-spacing: 0.5px;
+     }
+     
+     .main-text-wrapper {
+       gap: 20px;
+     }
+     
+     .main-text-row {
+       height: 45px;
+     }
+     
+     .bg-text {
+       font-size: 10px !important;
+     }
+   }
+   
+   /* ========================================
+   響應式字體大小調整
+   ======================================== */
+
+/* === 平板設備 (768px - 1024px) === */
+@media (max-width: 1024px) {
+  /* About 和 Experience 標題 */
+  .text-3xl {
+    font-size: 1.75rem; /* 從 3xl 改為更小 */
+  }
+  
+  /* 名字標題 */
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  /* 公司/學校名稱 */
+  .text-lg {
+    font-size: 1rem;
+  }
+  
+  /* 描述文字 */
+  .text-gray-600 {
+    font-size: 0.875rem;
+  }
+  
+  /* 小字（獎學金等） */
+  .text-sm {
+    font-size: 0.75rem;
+  }
+}
+
+/* === 手機設備 (小於 768px) === */
+@media (max-width: 768px) {
+  /* About 和 Experience 區塊標題 */
+  h2.text-3xl {
+    font-size: 1.5rem !important;
+    margin-bottom: 2rem;
+  }
+  
+  /* 個人名字 */
+  h3.text-2xl {
+    font-size: 1.25rem !important;
+  }
+  
+  /* 公司/學校名稱 */
+  h3.text-lg {
+    font-size: 0.95rem !important;
+  }
+  
+  /* 職位/學位描述 */
+  p.text-gray-600 {
+    font-size: 0.85rem !important;
+  }
+  
+  /* 地點文字 */
+  p.text-gray-700 {
+    font-size: 0.85rem !important;
+  }
+  
+  /* 日期 */
+  p.text-gray-500 {
+    font-size: 0.8rem !important;
+  }
+  
+  /* 獎學金等小字 */
+  .text-sm {
+    font-size: 0.7rem !important;
+  }
+  
+  /* 社交圖標稍微縮小 */
+  .fab, .fas {
+    font-size: 1.5rem !important;
+  }
+  
+  /* 調整內邊距 */
+  section {
+    padding: 2rem 0 !important;
+  }
+  
+  /* 調整間距 */
+  .space-y-8 {
+    gap: 1.5rem;
+  }
+  
+  .mb-20 {
+    margin-bottom: 3rem;
+  }
+}
+
+/* === 超小手機 (小於 480px) === */
+@media (max-width: 480px) {
+  /* 進一步縮小字體 */
+  h2.text-3xl {
+    font-size: 1.25rem !important;
+  }
+  
+  h3.text-2xl {
+    font-size: 1.1rem !important;
+  }
+  
+  h3.text-lg {
+    font-size: 0.9rem !important;
+  }
+  
+  p.text-gray-600,
+  p.text-gray-700 {
+    font-size: 0.8rem !important;
+  }
+  
+  p.text-gray-500 {
+    font-size: 0.75rem !important;
+  }
+  
+  .text-sm {
+    font-size: 0.65rem !important;
+  }
+  
+  /* 社交圖標 */
+  .fab, .fas {
+    font-size: 1.25rem !important;
+  }
+  
+  /* 調整個人照片大小 */
+  .w-56 {
+    width: 10rem !important;
+    height: 10rem !important;
+  }
+}

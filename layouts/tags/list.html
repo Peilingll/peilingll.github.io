@@ -1,0 +1,48 @@
+{{ define "main" }}
+<main class="min-h-screen bg-white">
+  <div class="max-w-5xl mx-auto px-6 py-16">
+    <!-- Tag Header -->
+    <div class="mb-12">
+      <h1 class="text-3xl font-bold mb-3">{{ .Title }}</h1>
+      <a href="/tags/" class="text-gray-500 hover:text-[#7e6afc] transition-colors">
+        ← Back to all tags
+      </a>
+    </div>
+    
+    <!-- Articles List -->
+    <div class="divide-y divide-gray-200">
+      {{ range .Pages }}
+        <article class="py-8 group">
+          <div class="flex items-start justify-between">
+            <!-- Date -->
+            <time class="text-gray-500 font-mono text-sm mt-1 mr-8">
+              {{ .Date.Format "2006.01" }}
+            </time>
+            
+            <!-- Content -->
+            <div class="flex-1">
+              <h2 class="text-xl font-medium mb-3 group-hover:text-[#7e6afc] transition-colors">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </h2>
+              
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-3">
+                {{ range .Params.tags }}
+                  <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    {{ . }}
+                  </span>
+                {{ end }}
+              </div>
+            </div>
+            
+            <!-- Location (if available) -->
+            {{ if .Params.location }}
+              <span class="text-gray-500 text-sm ml-8">{{ .Params.location }}</span>
+            {{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</main>
+{{ end }}

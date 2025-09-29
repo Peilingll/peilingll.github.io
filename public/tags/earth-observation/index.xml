@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Earth Observation on PEILING SONG</title>
+    <link>http://localhost:51633/tags/earth-observation/</link>
+    <description>Recent content in Earth Observation on PEILING SONG</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:51633/tags/earth-observation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tree Species Classification</title>
+      <link>http://localhost:51633/projects/project3/</link>
+      <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:51633/projects/project3/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;The aim of this project is to classify dominant tree species across Germany by leveraging satellite image time series. Forest management practices benefit from knowledge of species distribution, which supports site-adapted tree selection and climate-resilient forest planning. Tree species labels in the TreeSatAI dataset are organised hierarchically (leaf type, genus, species), allowing us to develop classification methods that exploit this structure to improve model performance. We integrate Sentinel-2 multi-spectral imagery (10 spectral bands, 5 vegetation indices) into a data processing pipeline that extracts monthly composites (March–October 2022) and generates 5×5 pixel patches for each reference point. We trained and evaluated five classification models: Random Forest, XGBoost, Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN), and Transformer architectures.Hierarchical labels (L1, L2) significantly improved accuracy both traditional machine learning and deep learning models(CNN, RNN). Furthermore, data augmentation with rotation and translation enhanced the generalisation ability of deep learning models. Among all methods, XGBoost achieved the highest test accuracy (83.6%)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,2 @@
+{{ $heroCSS := resources.Get "css/hero.css" | resources.Minify }}
+<link rel="stylesheet" href="{{ $heroCSS.RelPermalink }}">

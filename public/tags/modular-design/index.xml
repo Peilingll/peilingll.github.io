@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Modular Design on PEILING SONG</title>
+    <link>http://localhost:51633/tags/modular-design/</link>
+    <description>Recent content in Modular Design on PEILING SONG</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:51633/tags/modular-design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Constraints Design in Timber Modular Process</title>
+      <link>http://localhost:51633/projects/project6/</link>
+      <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:51633/projects/project6/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This project was developed during the &lt;strong&gt;&lt;a href=&#34;https://hackaec.com/events.html&#34;&gt;2024 AEC Hackathon Munich&lt;/a&gt;&lt;/strong&gt; and collabrated with  &lt;a href=&#34;https://www.tum-venture-labs.de/labs/built-environment/&#34;&gt;TUM Venture Lab Built Environment&lt;/a&gt;. We proposed a &lt;strong&gt;Constraint Design (CD)&lt;/strong&gt; model, introducing an intermediate abstract layer that integrates manufacturing and MEP requirements early in the design phase. By embedding constraints upfront, the approach reduces redesign efforts, improves collaboration and efficiency..&lt;/p&gt;&#xA;&lt;h2 id=&#34;hackathon-topics&#34;&gt;Hackathon Topics&lt;/h2&gt;&#xA;&lt;p&gt;The challenge from &lt;strong&gt;&lt;a href=&#34;https://www.dreso.com/de/&#34;&gt;Drees &amp;amp; Sommer&lt;/a&gt;&lt;/strong&gt; focused on timber modular design, where misaligned details between designers and manufacturers often cause costly redesigns. Our goal was to create an &lt;strong&gt;abstract intermediate model&lt;/strong&gt; that simplifies data exchange and coordination.&lt;br&gt;&#xA;&lt;img src=&#34;http://localhost:51633/images/pj6-6.webp&#34; alt=&#34;Dashboard&#34;&gt;&#xA;&lt;em&gt;Figure 1. Overview of the main challenge (sourced from Drees &amp;amp; Sommer)&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

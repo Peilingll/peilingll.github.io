@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IoT on PEILING SONG</title>
+    <link>http://localhost:51633/tags/iot/</link>
+    <description>Recent content in IoT on PEILING SONG</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:51633/tags/iot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Digital Twin × BIM × IoT</title>
+      <link>http://localhost:51633/blog/blog1/</link>
+      <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:51633/blog/blog1/</guid>
+      <description>&lt;p&gt;In the field of architecture, &lt;strong&gt;“comfort” and “energy efficiency” are often seen as conflicting goals&lt;/strong&gt;. Heating, Ventilation, and Air Conditioning (HVAC) systems account for nearly &lt;strong&gt;40% of a building’s total energy use&lt;/strong&gt;. Reducing energy consumption without compromising occupant comfort is therefore a complex and urgent challenge.&lt;/p&gt;&#xA;&lt;p&gt;I recently read and reviewed a study on a &lt;strong&gt;Digital Twin (DT) + BIM + IoT framework&lt;/strong&gt;, where the key focus was:&lt;/p&gt;&#xA;&lt;p&gt;➔ How to dynamically optimize indoor thermal comfort while reducing energy consumption through open-source platforms, real-time sensing, and machine learning.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Indoor Ambient Monitoring</title>
+      <link>http://localhost:51633/projects/project2/</link>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:51633/projects/project2/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This project is about developing an Indoor Ambient Monitoring system to manage and visualize human comfort relevant environmental parameters like temperature, humidity, illuminance, noise level, CO2 concentration, and others in an indoor environment. Further, the task is to study an insight on LoRaWAN Indoor Network Coverage.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:51633/images/pj2-1.webp&#34; alt=&#34;Dashboard&#34;&gt;&#xA;&lt;em&gt;&lt;a href=&#34;https://xmruuu.github.io/25SS_IoT_Indoor-Ambient-Monitoring/&#34;&gt;Open Dashboard&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;&#xA;&lt;p&gt;The system architecture is divided into hardware and software components. On the hardware side, multiple indoor environmental sensors (measuring CO, PM2.5, temperature, humidity, etc.) transmit data via LoRa using the CayenneLPP encoding format through a LoRaWAN gateway to IoT cloud platforms such as TTN and SWM. On the software side, these platforms forward the data to the FROST Server via the standardized SensorThings API, where it is stored in MongoDB. Meanwhile, the semantic building model of TUM in CityGML LOD 3.0 is processed with FME and converted into Cesium-compatible 3D Tiles. Finally, JavaScript is used to fetch live or historical data from the FROST Server and MongoDB, integrating it into Cesium 3D visualizations and interactive dashboards for end-user applications.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

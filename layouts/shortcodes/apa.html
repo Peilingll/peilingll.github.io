@@ -1,0 +1,8 @@
+<div style="margin-bottom: 0.8em; padding-left: 2em; text-indent: -2em;">
+    [{{ .Get "number" }}]
+    {{ .Get "author" }} ({{ .Get "year" }}).
+    {{ .Get "title" }}.
+    <i>{{ .Get "journal" }}</i>, <i>{{ .Get "volume" }}</i>{{ with .Get "issue" }}({{ . }}){{ end }}, {{ .Get "pages" }}.
+    <a href="{{ .Get "doi" }}" target="_blank">{{ .Get "doi" }}</a>
+  </div>
+  

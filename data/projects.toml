@@ -1,0 +1,20 @@
+[[projects]]
+title = "Real-Time Building Digital Model Reconstruction Using a Robotic Agent"
+description = "By combining robotics, state-of-the-art sensors, advanced point cloud processing techniques, and real-time computation, the project aims to provide accurate and dynamic spatial mapping solutions, offering a robust foundation for applications in fields such as architecture, urban planning, and autonomous navigation."
+image = "/images/pj1-4.webp"
+url = "/projects/project1"
+tags = ["Project", "Point Cloud", "Simulation", "Semantic", "Robotics", "Munich, Germany"]
+
+[[projects]]
+title = "Indoor Ambient Monitoring"
+description = "This project is about developing an Indoor Ambient Monitoring system to manage and visualize human comfort relevant environmental parameters like temperature, humidity, illuminance, noise level, CO2 concentration, and others in an indoor environment. Further, the task is to study an insight on LoRaWAN Indoor Network Coverage."
+image = "/images/pj2-1.webp"
+url = "/projects/project2"
+tags = ["IoT", "BIM", "Smart Building", "Digital Twin", "Munich, Germany"]
+
+[[projects]]
+title = "Terra Vein"
+description = "This project was carried out in collaboration with XR HUB Bavaria, focusing on the production of an animation themed around future energy. The final work was showcased in the dome theater at 1E9 & Festival der Zukunft."
+image = "/images/pj4-1.webp"
+url = "/projects/project4"
+tags = ["Project", "Visualization", "Rendering", "3D Modeling", "Munich, Germany"]

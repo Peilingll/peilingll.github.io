@@ -1,0 +1,78 @@
+{{ define "main" }}
+<main class="max-w-4xl mx-auto px-6 py-12">
+  
+  <!-- Header Section -->
+  <header class="mb-10">
+    <h1 class="text-4xl font-bold mb-2">{{ .Title }}</h1>
+    
+    {{ with .Params.subtitle }}
+      <h2 class="text-xl text-gray-700 mb-2">{{ . }}</h2>
+    {{ end }}
+    
+    <p class="text-sm text-gray-500 mb-4">
+      {{ .Date.Format "January 2, 2006" }}
+    </p>
+
+    {{ with .Params.unit }}
+      <p class="text-sm text-gray-700"><strong>Unit:</strong> {{ . }}</p>
+    {{ end }}
+
+    {{ with .Params.supervised }}
+      <p class="text-sm text-gray-700"><strong>Supervised by:</strong> {{ . }}</p>
+    {{ end }}
+
+    {{ with .Params.Contributors }}
+      <p class="text-sm text-gray-700"><strong>Contributors:</strong> {{ . }}</p>
+    {{ end }}
+
+    <!-- Tags -->
+    {{ with .Params.tags }}
+    <div class="mt-4 flex flex-wrap gap-2">
+      {{ range . }}
+        <a href="/tags/{{ . | urlize }}" 
+           class="text-decoration font-medium"
+           style="color: #7e6afc; text-decoration: none;"
+           onmouseover="this.style.color='#FACC15'; this.style.textDecoration='underline';"
+           onmouseout="this.style.color='#7e6afc'; this.style.textDecoration='none';">
+           #{{ . }}
+        </a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </header>
+
+    <!-- Main Content -->
+    <article class="prose prose-neutral max-w-none prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-8 prose-h2:mb-4 lightbox">
+      {{ .Content }}
+    </article>
+    
+    <!-- Lightbox Overlay -->
+    <div id="lightbox-overlay" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+      <img id="lightbox-img" src="" alt="Expanded image" class="max-h-[90%] max-w-[90%] rounded-lg shadow-lg" />
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll(".lightbox img");
+        const overlay = document.getElementById("lightbox-overlay");
+        const overlayImg = document.getElementById("lightbox-img");
+    
+        images.forEach(img => {
+          img.addEventListener("click", () => {
+            overlayImg.src = img.src;
+            overlay.classList.add("active");
+          });
+        });
+    
+        overlay.addEventListener("click", () => {
+          overlay.classList.remove("active");
+          overlayImg.src = "";
+        });
+      });
+    </script>
+    
+    
+  
+
+</main>
+{{ end }}

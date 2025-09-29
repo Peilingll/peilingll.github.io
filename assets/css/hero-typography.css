@@ -1,0 +1,136 @@
+/* Hero 字體定義和顏色控制 */
+
+/* 字體引入 */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap');
+@import url("https://fonts.cdnfonts.com/css/thegoodmonolith"); 
+@import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
+
+/* 字體變數定義 */
+:root {
+  /* 顏色變數 */
+  --main-text-color: #ffffff;           /* 中間大字顏色 */
+  --main-text-hover-color: #fbf8b3;     /* 大字懸停顏色 */
+  --bg-text-color: #ffffff;             /* 背景小字顏色 */
+  --bg-text-hover-color: hsl(0, 0%, 100%);       /* 背景小字動畫時顏色 */
+  
+  /* 文字選取顏色 */
+  --selection-bg: #fd606c;              /* 選取背景色 */
+  --selection-text: #ffffff;            /* 選取文字色 */
+ 
+/* 字體家族變數 */
+  --main-text-font: "TheGoodMonolith";
+  --bg-text-font: "TheGoodMonolith";
+}
+
+/* 中間大字樣式 */
+.main-text {
+  font-family: var(--main-text-font);
+  color: var(--main-text-color);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 5px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.main-text:hover {
+  color: var(--main-text-hover-color);
+}
+
+/* 背景小字樣式 */
+.bg-text {
+  font-family: var(--bg-text-font);
+  color: var(--bg-text-color);
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+
+
+/* 字體載入優化 */
+.main-text,
+.kinetic-line,
+.bg-text {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* 響應式字體大小 */
+@media (max-width: 1200px) {
+  .main-text {
+    font-size: 6rem;
+    letter-spacing: 1px;
+  }
+  
+  .kinetic-line {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-text {
+    font-size: 4rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .kinetic-line {
+    font-size: 4rem;
+  }
+  
+  .bg-text {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-text {
+    font-size: 2.5rem;
+    letter-spacing: 0;
+  }
+  
+  .kinetic-line {
+    font-size: 2.5rem;
+  }
+  
+  .bg-text {
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+}
+
+/* 文字選取樣式 */
+::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+::-moz-selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+/* 針對不同文字類型的選取樣式 */
+.main-text::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+.bg-text::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+.kinetic-line::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-text);
+}
+

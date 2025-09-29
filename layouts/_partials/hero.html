@@ -1,0 +1,72 @@
+<!-- 優化後的 hero.html -->
+{{ $useGSAP := .Site.Params.hero.useGSAP | default false }}
+
+{{ if $useGSAP }}
+<!-- Hero Section with GSAP Effects -->
+<section class="hero-container">
+  
+  <!-- 白底背景圖片（最底層） -->
+  <div class="hero-background-white"></div>
+  
+  <!-- 主要背景圖片（bg1.png） -->
+  <div class="hero-background"></div>
+
+  <!-- 動態彩色背景圓球 -->
+<div class="dynamic-bg absolute inset-0 -z-0 overflow-hidden">
+  <!-- 球 1：往右上偏移 -->
+  <div class="absolute top-10 left-50 w-96 h-96 rounded-full opacity-50 blur-3xl float"
+       data-factor-x="1.5" data-factor-y="-3"
+       style="background: linear-gradient(to bottom right, #f6bcfd, #ccc6fd);">
+  </div>
+
+  <!-- 球 2：往左下偏移 -->
+  <div class="absolute top-24 right-50 w-96 h-96 rounded-full opacity-30 blur-3xl float"
+       data-factor-x="-2.0" data-factor-y="1.3"
+       style="background: linear-gradient(to bottom right, #ff2ac3, #bef6ff);">
+  </div>
+
+  <!-- 球 3：往右下偏移 -->
+  <div class="absolute bottom-20 left-70 w-80 h-80 rounded-full opacity-70 blur-3xl float"
+       data-factor-x="2.2" data-factor-y="2.0"
+       style="background: linear-gradient(to bottom right, #95f6ff, #fd0e95);">
+  </div>
+</div>
+
+  <!-- 背景小字 - 集中在畫面中間60%位置 -->
+  <div class="background-text-container">
+    <div class="bg-text" style="top: 19%; left: 28%;">Machine Learning</div>
+    <div class="bg-text" style="top: 31%; left: 23%;">Data Science</div>
+    <div class="bg-text" style="top: 33%; left: 38%;">BIM</div>
+    <div class="bg-text" style="top: 50%; left: 28%;">Semantic Modeling</div>
+    <div class="bg-text" style="top: 40%; left: 35%;">Internet of Things</div>
+    <div class="bg-text" style="top: 18%; left: 50%;">Digital Twin</div>
+    <div class="bg-text" style="top: 22%; left: 27%;">Smart Building</div>
+    <div class="bg-text" style="top: 25%; left: 60%;">Thermal Comfort</div>
+    <div class="bg-text" style="top: 40%; left: 53%;">Robotics</div>
+    <div class="bg-text" style="top: 25%; left: 58%;">Simulation</div>
+  </div>
+
+  <!-- 主要大字內容 -->
+  <div class="main-text-container">
+    <div class="main-text-wrapper">
+      
+      <div class="main-text-row" data-id="engineering">
+        <div class="main-text">INFORMATION</div>
+        <div class="interactive-area"></div>
+      </div>
+
+      <div class="main-text-row" data-id="architecture">
+        <div class="main-text">ARCHITECTURE</div>
+        <div class="interactive-area"></div>
+      </div>
+
+      <div class="main-text-row" data-id="informatioc">
+        <div class="main-text">ENGINEERING</div>
+        <div class="interactive-area"></div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+{{ end }}
