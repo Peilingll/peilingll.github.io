@@ -1,7 +1,7 @@
-// Hero 主控制器（優化版）
+// Hero main controller (optimized)
 // assets/js/hero-main.js
 
-// 全域狀態管理
+// Global state management
 window.HeroState = {
   activeTextId: null,
   isAnimating: false,
@@ -11,26 +11,26 @@ window.HeroState = {
   }
 };
 
-// 主要初始化函數
+// Main initialization function
 document.addEventListener('DOMContentLoaded', function() {
-  // 檢查是否為 Hero 頁面
+  // Check if this is a Hero page
   const heroContainer = document.querySelector('.hero-container');
   if (!heroContainer) {
     return;
   }
 
-  // 檢查 GSAP 是否載入
+  // Check if GSAP is loaded
   if (typeof gsap === 'undefined') {
     return;
   }
 
-  // 初始化自定義緩動
+  // Initialize custom easing functions
   if (typeof CustomEase !== 'undefined') {
     CustomEase.create("heroEase", "0.86, 0, 0.07, 1");
     CustomEase.create("heroMouseEase", "0.25, 0.1, 0.25, 1");
   }
 
-  // 等待字體載入完成
+  // Wait for fonts to load
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(initializeHero);
   } else {
@@ -44,10 +44,10 @@ function initializeHero() {
 }
 
 function initializeModules() {
-  // 等待其他模組載入後再初始化
+  // Wait for other modules to load before initializing
   const checkModules = () => {
     if (window.TextEffects && window.BackgroundText) {
-      // 初始化各模組
+      // Initialize each module
       window.HeroState.modules.textEffects = new window.TextEffects();
       window.HeroState.modules.backgroundText = new window.BackgroundText();
       
@@ -60,12 +60,12 @@ function initializeModules() {
 }
 
 function setupGlobalEvents() {
-  // 響應式處理
+  // Handle responsive adjustments
   let resizeTimer;
   window.addEventListener('resize', function() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function() {
-      // 通知各模組響應式變化
+      // Notify all modules of responsive changes
       Object.values(window.HeroState.modules).forEach(module => {
         if (module && typeof module.handleResize === 'function') {
           module.handleResize();
@@ -74,7 +74,7 @@ function setupGlobalEvents() {
     }, 250);
   });
 
-  // 滑鼠離開整個 hero 區域時重置狀態
+  // Reset state when mouse leaves hero area
   const heroContainer = document.querySelector('.hero-container');
   if (heroContainer) {
     heroContainer.addEventListener('mouseleave', function() {
@@ -85,12 +85,12 @@ function setupGlobalEvents() {
   }
 }
 
-// 重置 Hero 狀態
+// Reset Hero state
 function resetHeroState() {
   window.HeroState.activeTextId = null;
   window.HeroState.isAnimating = false;
   
-  // 通知各模組重置
+  // Notify all modules to reset
   Object.values(window.HeroState.modules).forEach(module => {
     if (module && typeof module.reset === 'function') {
       module.reset();
@@ -98,7 +98,7 @@ function resetHeroState() {
   });
 }
 
-// 公共方法
+// Public methods
 window.HeroMain = {
   setActiveText: function(textId) {
     if (window.HeroState.isAnimating) return;
@@ -107,7 +107,7 @@ window.HeroMain = {
     window.HeroState.activeTextId = textId;
     
     
-    // 通知各模組活動文字變化
+    // Notify all modules of active text change
     Object.values(window.HeroState.modules).forEach(module => {
       if (module && typeof module.onActiveTextChange === 'function') {
         module.onActiveTextChange(textId, previousId);
@@ -120,7 +120,7 @@ window.HeroMain = {
     window.HeroState.activeTextId = null;
     
     
-    // 通知各模組清除活動狀態
+    // Notify all modules to clear active state
     Object.values(window.HeroState.modules).forEach(module => {
       if (module && typeof module.onActiveTextClear === 'function') {
         module.onActiveTextClear(previousId);

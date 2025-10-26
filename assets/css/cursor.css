@@ -1,4 +1,4 @@
-/* 隱藏系統游標 */
+/* Hide system cursor */
 * {
   cursor: none !important;
 }
@@ -17,7 +17,7 @@
     z-index: 99999;
   }
 
-  /* 箭頭脈衝動畫 */
+  /* Arrow pulse animation */
   @keyframes pulse {
     0% {
       transform: translate(-50%, -50%) scale(1);
@@ -33,7 +33,7 @@
     }
   }
   
-  /* hover 狀態 - 保持圓點形狀並添加脈衝動畫 */
+  /* Hover state - maintain dot shape with pulse animation */
   #custom-cursor.hover {
     background-color: #fd606c !important;
     border-radius: 50% !important;
@@ -43,7 +43,7 @@
     animation: hoverPulse 1.2s infinite;
   }
 
-  /* hover 脈衝動畫 */
+  /* Hover pulse animation */
   @keyframes hoverPulse {
     0% {
       transform: translate(-50%, -50%) scale(1);
@@ -58,4 +58,4 @@
       opacity: 0.8;
     }
   }
-  
+ 

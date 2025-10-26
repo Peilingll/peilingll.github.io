@@ -1,28 +1,28 @@
-/* Hero 字體定義和顏色控制 */
+/* Hero typography definitions and color controls */
 
-/* 字體引入 */
+/* Font imports */
 @import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap');
 @import url("https://fonts.cdnfonts.com/css/thegoodmonolith"); 
 @import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
 
-/* 字體變數定義 */
+/* Font variable definitions */
 :root {
-  /* 顏色變數 */
-  --main-text-color: #ffffff;           /* 中間大字顏色 */
-  --main-text-hover-color: #fbf8b3;     /* 大字懸停顏色 */
-  --bg-text-color: #ffffff;             /* 背景小字顏色 */
-  --bg-text-hover-color: hsl(0, 0%, 100%);       /* 背景小字動畫時顏色 */
+  /* Color variables */
+  --main-text-color: #ffffff;           /* Main text color */
+  --main-text-hover-color: #fbf8b3;     /* Main text hover color */
+  --bg-text-color: #ffffff;             /* Background text color */
+  --bg-text-hover-color: hsl(0, 0%, 100%);       /* Background text animation color */
   
-  /* 文字選取顏色 */
-  --selection-bg: #fd606c;              /* 選取背景色 */
-  --selection-text: #ffffff;            /* 選取文字色 */
+  /* Text selection colors */
+  --selection-bg: #fd606c;              /* Selection background color */
+  --selection-text: #ffffff;            /* Selection text color */
  
-/* 字體家族變數 */
+/* Font family variables */
   --main-text-font: "TheGoodMonolith";
   --bg-text-font: "TheGoodMonolith";
 }
 
-/* 中間大字樣式 */
+/* Main text styles */
 .main-text {
   font-family: var(--main-text-font);
   color: var(--main-text-color);
@@ -39,7 +39,7 @@
   color: var(--main-text-hover-color);
 }
 
-/* 背景小字樣式 */
+/* Background text styles */
 .bg-text {
   font-family: var(--bg-text-font);
   color: var(--bg-text-color);
@@ -54,7 +54,7 @@
 
 
 
-/* 字體載入優化 */
+/* Font loading optimization */
 .main-text,
 .kinetic-line,
 .bg-text {
@@ -63,7 +63,7 @@
   backface-visibility: hidden;
 }
 
-/* 響應式字體大小 */
+/* Responsive font sizes */
 @media (max-width: 1200px) {
   .main-text {
     font-size: 6rem;
@@ -107,7 +107,7 @@
   }
 }
 
-/* 文字選取樣式 */
+/* Text selection styles */
 ::selection {
   background-color: var(--selection-bg);
   color: var(--selection-text);
@@ -118,7 +118,7 @@
   color: var(--selection-text);
 }
 
-/* 針對不同文字類型的選取樣式 */
+/* Text selection styles for different text types */
 .main-text::selection {
   background-color: var(--selection-bg);
   color: var(--selection-text);

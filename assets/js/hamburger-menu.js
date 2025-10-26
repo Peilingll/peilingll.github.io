@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navMenu.classList.toggle('active');
       });
       
-      // 點擊導航連結後自動關閉選單
+      // Auto-close menu after clicking navigation links
       const navLinks = navMenu.querySelectorAll('a');
       navLinks.forEach(link => {
         link.addEventListener('click', function() {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       });
       
-      // 點擊外部區域關閉選單
+      // Close menu when clicking outside
       document.addEventListener('click', function(e) {
         if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
           hamburger.classList.remove('active');

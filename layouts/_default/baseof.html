@@ -8,7 +8,7 @@
   
   {{ $useGSAP := .Site.Params.hero.useGSAP | default false }}
 
-  <!-- 現有的 CSS（Tailwind 等） -->
+  <!-- Existing CSS (Tailwind, etc.) -->
   {{ with (templates.Defer (dict "key" "global")) }}
     {{ partial "css.html" . }}
   {{ end }}
@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   {{ if $useGSAP }}
-  <!-- Hero 模組化 CSS -->
+  <!-- Hero modular CSS -->
   {{ $heroBase := resources.Get "css/hero-base.css" | resources.Minify }}
   <link rel="stylesheet" href="{{ $heroBase.RelPermalink }}">
   
@@ -27,7 +27,7 @@
   {{ $heroAnimations := resources.Get "css/hero-animations.css" | resources.Minify }}
   <link rel="stylesheet" href="{{ $heroAnimations.RelPermalink }}">
   
-  <!-- 游標樣式（如果需要的話） -->
+  <!-- Cursor styles (if needed) -->
   {{ $cursorCSS := resources.Get "css/cursor.css" | resources.Minify }}
   <link rel="stylesheet" href="{{ $cursorCSS.RelPermalink }}">
   
@@ -44,11 +44,11 @@
   {{ partial "footer.html" . }}
   
   {{ if $useGSAP }}
-  <!-- GSAP 核心庫 -->
+  <!-- GSAP core library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"></script>
   
-  <!-- Hero 模組化 JavaScript（優化版） -->
+  <!-- Hero modular JavaScript (optimized) -->
   {{ $heroMain := resources.Get "js/hero-main.js" | resources.Minify }}
   <script src="{{ $heroMain.RelPermalink }}"></script>
   
@@ -58,14 +58,14 @@
   {{ $backgroundText := resources.Get "js/background-text.js" | resources.Minify }}
   <script src="{{ $backgroundText.RelPermalink }}"></script>
   
-  <!-- 游標功能（如果需要的話） -->
+  <!-- Cursor functionality (if needed) -->
   {{ $cursorJS := resources.Get "js/cursor.js" | resources.Minify }}
   <script src="{{ $cursorJS.RelPermalink }}"></script>
   
   {{ $heroBalls := resources.Get "js/hero-balls.js" | resources.Minify }}
   <script src="{{ $heroBalls.RelPermalink }}" defer></script>
 
-  <!-- 移動式清單 -->
+  <!-- Mobile menu -->
   {{ $hamburgerJS := resources.Get "js/hamburger-menu.js" | resources.Minify }}
   <script src="{{ $hamburgerJS.RelPermalink }}"></script>
 

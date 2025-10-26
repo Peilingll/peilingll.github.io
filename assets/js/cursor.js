@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
   
-    // 游標跟隨滑鼠
+    // Cursor follows mouse movement
     document.addEventListener("mousemove", (e) => {
       cursor.style.top = `${e.clientY}px`;
       cursor.style.left = `${e.clientX}px`;
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     
-    // 添加 hover 效果
+    // Add hover effect
     const hoverElements = document.querySelectorAll("a, button, .main-text-row, .bg-text");
     
     hoverElements.forEach(element => {

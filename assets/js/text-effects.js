@@ -1,4 +1,4 @@
-// 大字互動效果模組
+// Major text interactive effects module
 // assets/js/text-effects.js
 
 window.TextEffects = function() {
@@ -6,7 +6,7 @@ window.TextEffects = function() {
   let mainTextRows = [];
   let splitTexts = {};
 
-  // 初始化
+  // Initialize the text effects module
   this.init = function() {
     mainTextRows = document.querySelectorAll('.main-text-row');
     
@@ -14,7 +14,7 @@ window.TextEffects = function() {
       return;
     }
 
-    // 為每個大字創建字符分割
+    // Create character split for each major text row
     mainTextRows.forEach(row => {
       const textElement = row.querySelector('.main-text');
       const textId = row.dataset.id;
@@ -69,7 +69,7 @@ function createCharacterSplit(textElement) {
     `;
     
     charWrapper.appendChild(charSpan);
-    if (i < originalText.length - 1) { // 不在最後一個字母後加分割線
+    if (i < originalText.length - 1) { // Do not add divider after the last character
       charWrapper.appendChild(divider);
     }
     
@@ -78,45 +78,45 @@ function createCharacterSplit(textElement) {
   }
   
   return { chars, originalText };
-}
+  }
 
-  // 設置行事件
+  // Setup event listeners for each text row
   function setupRowEvents(row, textId) {
     const interactiveArea = row.querySelector('.interactive-area');
     const textElement = row.querySelector('.main-text');
     
     if (!interactiveArea || !textElement) return;
 
-    // 滑鼠進入
+    // Handle mouse enter event
     interactiveArea.addEventListener('mouseenter', function() {
       handleMouseEnter(row, textId);
     });
 
-    // 滑鼠離開
+    // Handle mouse leave event
     interactiveArea.addEventListener('mouseleave', function() {
       handleMouseLeave(row, textId);
     });
 
-    // 點擊支持（移動設備）
+    // Handle click events for mobile devices
     interactiveArea.addEventListener('click', function() {
       handleClick(row, textId);
     });
   }
 
-  // 滑鼠進入處理
+  // Handle mouse enter interaction
   function handleMouseEnter(row, textId) {
     if (window.HeroState.activeTextId === textId) return;
 
-    // 更新全域狀態
+    // Update global state
     window.HeroMain.setActiveText(textId);
     
-    // 添加活動狀態
+    // Add active state class
     row.classList.add('active');
     
-    // 執行字符展開動畫
+    // Execute character expand animation
     animateTextExpand(textId);
     
-    // 文字顏色變化
+    // Apply text color and scale transitions
     const textElement = row.querySelector('.main-text');
     gsap.to(textElement, {
       duration: 0.5,
@@ -126,20 +126,20 @@ function createCharacterSplit(textElement) {
     });
   }
 
-  // 滑鼠離開處理
+  // Handle mouse leave interaction
   function handleMouseLeave(row, textId) {
     if (window.HeroState.activeTextId !== textId) return;
 
-    // 清除全域狀態
+    // Clear global state
     window.HeroMain.clearActiveText();
     
-    // 移除活動狀態
+    // Remove active state class
     row.classList.remove('active');
     
-    // 執行字符收縮動畫
+    // Execute character collapse animation
     animateTextCollapse(textId);
     
-    // 恢復文字樣式
+    // Restore original text style
     const textElement = row.querySelector('.main-text');
     gsap.to(textElement, {
       duration: 0.5,
@@ -149,12 +149,12 @@ function createCharacterSplit(textElement) {
     });
   }
 
-  // 點擊處理（移動設備）
+  // Handle click interaction for mobile devices
   function handleClick(row, textId) {
     if (window.HeroState.activeTextId === textId) {
       handleMouseLeave(row, textId);
     } else {
-      // 先清除其他活動狀態
+      // Clear other active states first
       mainTextRows.forEach(otherRow => {
         if (otherRow !== row && otherRow.classList.contains('active')) {
           const otherTextId = otherRow.dataset.id;
@@ -185,7 +185,7 @@ function createCharacterSplit(textElement) {
       continue;
     }
 
-    // 字母容器
+    // Character container wrapper
     const charWrapper = document.createElement('span');
     charWrapper.className = 'char-wrapper';
     charWrapper.style.cssText = `
@@ -194,7 +194,7 @@ function createCharacterSplit(textElement) {
       overflow: hidden;
     `;
     
-    // 字母本身
+    // Character element itself
     const charSpan = document.createElement('span');
     charSpan.className = 'char';
     charSpan.textContent = char;
@@ -205,7 +205,7 @@ function createCharacterSplit(textElement) {
       transition: transform 0.4s ease;
     `;
     
-    // 分割線（固定位置）
+    // Divider element (fixed position)
     const divider = document.createElement('span');
     divider.className = 'char-divider';
     divider.style.cssText = `
@@ -234,7 +234,7 @@ function animateTextExpand(textId) {
   if (!split || !split.chars) return;
 
   split.chars.forEach((item, i) => {
-    // 字母向左移動
+    // Animate character to move left
     gsap.to(item.char, {
       x: 15,
       duration: 0.4,
@@ -242,7 +242,7 @@ function animateTextExpand(textId) {
       ease: "power2.out"
     });
     
-    // 分割線顯示（不移動）
+    // Show divider without movement
     gsap.to(item.divider, {
       opacity: 0.5,
       duration: 0.3,
@@ -257,7 +257,7 @@ function animateTextCollapse(textId) {
   if (!split || !split.chars) return;
 
   split.chars.forEach((item, i) => {
-    // 字母恢復
+    // Restore character to original position
     gsap.to(item.char, {
       x: 0,
       duration: 0.4,
@@ -265,7 +265,7 @@ function animateTextCollapse(textId) {
       ease: "power2.out"
     });
     
-    // 分割線隱藏
+    // Hide divider
     gsap.to(item.divider, {
       opacity: 0,
       duration: 0.3,
@@ -273,11 +273,11 @@ function animateTextCollapse(textId) {
       ease: "power2.out"
     });
   });
-}
+  }
 
-  // 響應式處理
+  // Handle responsive adjustments
   this.handleResize = function() {
-    // 重新計算字符寬度
+    // Recalculate character widths based on viewport
     Object.keys(splitTexts).forEach(textId => {
       const split = splitTexts[textId];
       if (split && split.chars) {
@@ -286,7 +286,7 @@ function animateTextCollapse(textId) {
         const expandWidth = isMobile ? 60 : 100;
         
         split.chars.forEach(charItem => {
-          // 檢查 charItem 是否有 char 屬性（DOM 元素）
+          // Verify charItem has valid char DOM element
           if (charItem && charItem.char && charItem.char.style) {
             charItem.char.style.maxWidth = baseWidth + 'px';
             charItem.char.dataset.expandWidth = expandWidth;
@@ -296,7 +296,7 @@ function animateTextCollapse(textId) {
     });
   };
 
-  // 重置所有文字效果
+  // Reset all text effects to initial state
   this.reset = function() {
     mainTextRows.forEach(row => {
       const textId = row.dataset.id;
@@ -306,7 +306,7 @@ function animateTextCollapse(textId) {
     });
   };
 
-  // 活動文字變化時的回調
+  // Callback when active text changes
   this.onActiveTextChange = function(newTextId, previousTextId) {
     if (previousTextId && previousTextId !== newTextId) {
       const previousRow = document.querySelector(`[data-id="${previousTextId}"]`);
@@ -316,7 +316,7 @@ function animateTextCollapse(textId) {
     }
   };
 
-  // 活動文字清除時的回調
+  // Callback when active text is cleared
   this.onActiveTextClear = function(previousTextId) {
     if (previousTextId) {
       const previousRow = document.querySelector(`[data-id="${previousTextId}"]`);
@@ -326,6 +326,6 @@ function animateTextCollapse(textId) {
     }
   };
 
-  // 自動初始化
+  // Auto-initialize on module load
   this.init();
 };

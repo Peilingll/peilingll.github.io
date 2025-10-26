@@ -15,13 +15,13 @@ html {
 }
 
 .prose p {
-  text-align: justify; /* 內文左右齊邊對齊 */
+  text-align: justify; /* Full-justify text alignment */
 }
 
 .prose img {
   margin-left: auto;
   margin-right: auto;
-  border-radius: 0.5rem; /* 圖片圓角 */
+  border-radius: 0.5rem; /* Rounded image corners */
 }
 
 .prose img {
@@ -29,7 +29,7 @@ html {
   margin-right: auto;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  width: 75%; /* 控制大小 */
+  width: 75%; /* Control image size */
   border-radius: 0.5rem;
 }
 
@@ -42,7 +42,7 @@ html {
 }
 
 
-/* ----------- 控制圖片大小 + 小標 ----------- */
+/* Control image size and captions */
 .prose em {
   display: block;
   text-align: center;
@@ -59,7 +59,7 @@ html {
   display: flex;
 }
 
-/* ----------- 控制項目符號 ----------- */
+/* Control bullet points */
 .prose ul {
   list-style-type: disc;
   padding-left: 1.5rem;
@@ -69,14 +69,14 @@ html {
 }
 
 .prose ul li {
-  margin-bottom: 0.5rem;   /* 行距 */
-  line-height: 1.6;        /* 更好閱讀 */
+  margin-bottom: 0.5rem;   /* Line spacing */
+  line-height: 1.6;        /* Better readability */
 }
 
 .prose a {
   color: #7e6afc;          /* Tailwind blue-600 */
   text-decoration: underline;
-  text-underline-offset: 3px;  /* 下劃線離字遠一點 */
+  text-underline-offset: 3px;  /* Underline offset from text */
   font-weight: 500;
 }
 
@@ -93,19 +93,19 @@ html {
   line-height: 1.6;
 }
 
-/* ----------- 移動端優化 ----------- */
+/* Mobile optimization */
    
-   /* === 移動端背景小字修復 === */
+   /* Mobile background text fix */
    @media (max-width: 768px) {
      .bg-text {
        font-size: 12px !important;
        opacity: 0.4;
-       letter-spacing: 0.5px;
-     }
+      letter-spacing: 0.5px;
+    }
      
-     /* 確保小字在安全區域內 */
+     /* Ensure small text stays within safe area */
      .background-text-container {
-       padding: 200px 5px 5px 5px; /* 上方留出 header 空間 */
+       padding: 200px 5px 5px 5px; /* Top padding for header space */
      }
      
      .background-text-container .bg-text:nth-child(1) { 
@@ -121,11 +121,11 @@ html {
       bottom: 30%; right: 12%; /* Semantic Modeling */
     }
     .background-text-container .bg-text:nth-child(5) { 
-      bottom: 20%; left: 10%; /* Internet of Things */
+      bottom: 20%;       left: 10%; /* Internet of Things */
     }
     
-    /* 新增 6-10 */
-    .background-text-container .bg-text:nth-child(6) { 
+    /* Additional elements 6-10 */
+    .background-text-container .bg-text:nth-child(6) {
       top: 28%; right: 15%; /* Digital Twin */
     }
     .background-text-container .bg-text:nth-child(7) { 
@@ -138,11 +138,11 @@ html {
       bottom: 1%; right: 20%; /* Robotics */
     }
     .background-text-container .bg-text:nth-child(10) { 
-      bottom: 1%; right: 25%; /* Simulation */
+      bottom: 1%;       right: 25%; /* Simulation */
     }
    }
    
-   /* === 漢堡選單樣式 === */
+   /* Hamburger menu styles */
    .hamburger-menu {
      display: none;
      background: none;
@@ -161,7 +161,7 @@ html {
      transition: all 0.3s;
    }
    
-   /* 漢堡選單動畫 */
+   /* Hamburger menu animation */
    .hamburger-menu.active span:nth-child(1) {
      transform: rotate(45deg) translate(5px, 5px);
    }
@@ -174,7 +174,7 @@ html {
      transform: rotate(-45deg) translate(7px, -6px);
    }
    
-   /* 移動端導航選單 */
+   /* Mobile navigation menu */
    @media (max-width: 768px) {
      .hamburger-menu {
        display: block;
@@ -214,10 +214,10 @@ html {
      }
    }
    
-   /* === 主要大字避免被遮擋 === */
+   /* Prevent main text from being blocked */
    @media (max-width: 768px) {
      .main-text-container {
-       padding: 80px 20px 20px 20px; /* 上方留更多空間給 header */
+       padding: 80px 20px 20px 20px; /* Extra top space for header */
      }
      
      .main-text-wrapper {
@@ -235,7 +235,7 @@ html {
        justify-content: center !important;
      }
      
-     /* 確保文字居中不偏移 */
+     /* Ensure text stays centered without offset */
      .main-text-row[data-id="engineering"],
      .main-text-row[data-id="architecture"], 
      .main-text-row[data-id="informatic"] {
@@ -245,7 +245,7 @@ html {
      }
    }
    
-   /* === 更小螢幕優化 === */
+   /* Smaller screen optimization */
    @media (max-width: 480px) {
      .main-text {
        font-size: 1.8rem;
@@ -265,87 +265,85 @@ html {
      }
    }
    
-   /* ========================================
-   響應式字體大小調整
-   ======================================== */
+   /* Responsive font size adjustments */
 
-/* === 平板設備 (768px - 1024px) === */
+/* Tablet devices (768px - 1024px) */
 @media (max-width: 1024px) {
-  /* About 和 Experience 標題 */
+  /* About and Experience section titles */
   .text-3xl {
-    font-size: 1.75rem; /* 從 3xl 改為更小 */
+    font-size: 1.75rem; /* Reduced from 3xl */
   }
   
-  /* 名字標題 */
+  /* Name title */
   .text-2xl {
     font-size: 1.5rem;
   }
   
-  /* 公司/學校名稱 */
+  /* Company/School name */
   .text-lg {
     font-size: 1rem;
   }
   
-  /* 描述文字 */
+  /* Description text */
   .text-gray-600 {
     font-size: 0.875rem;
   }
   
-  /* 小字（獎學金等） */
+  /* Small text (scholarships, etc.) */
   .text-sm {
     font-size: 0.75rem;
   }
 }
 
-/* === 手機設備 (小於 768px) === */
+/* Mobile devices (less than 768px) */
 @media (max-width: 768px) {
-  /* About 和 Experience 區塊標題 */
+  /* About and Experience section titles */
   h2.text-3xl {
     font-size: 1.5rem !important;
     margin-bottom: 2rem;
   }
   
-  /* 個人名字 */
+  /* Personal name */
   h3.text-2xl {
     font-size: 1.25rem !important;
   }
   
-  /* 公司/學校名稱 */
+  /* Company/School name */
   h3.text-lg {
     font-size: 0.95rem !important;
   }
   
-  /* 職位/學位描述 */
+  /* Position/Degree description */
   p.text-gray-600 {
     font-size: 0.85rem !important;
   }
   
-  /* 地點文字 */
+  /* Location text */
   p.text-gray-700 {
     font-size: 0.85rem !important;
   }
   
-  /* 日期 */
+  /* Date */
   p.text-gray-500 {
     font-size: 0.8rem !important;
   }
   
-  /* 獎學金等小字 */
+  /* Small text (scholarships, etc.) */
   .text-sm {
     font-size: 0.7rem !important;
   }
   
-  /* 社交圖標稍微縮小 */
+  /* Slightly smaller social icons */
   .fab, .fas {
     font-size: 1.5rem !important;
   }
   
-  /* 調整內邊距 */
+  /* Adjust padding */
   section {
     padding: 2rem 0 !important;
   }
   
-  /* 調整間距 */
+  /* Adjust spacing */
   .space-y-8 {
     gap: 1.5rem;
   }
@@ -355,9 +353,9 @@ html {
   }
 }
 
-/* === 超小手機 (小於 480px) === */
+/* Extra small phones (less than 480px) */
 @media (max-width: 480px) {
-  /* 進一步縮小字體 */
+  /* Further reduce font sizes */
   h2.text-3xl {
     font-size: 1.25rem !important;
   }
@@ -383,12 +381,12 @@ html {
     font-size: 0.65rem !important;
   }
   
-  /* 社交圖標 */
+  /* Social icons */
   .fab, .fas {
     font-size: 1.25rem !important;
   }
   
-  /* 調整個人照片大小 */
+  /* Adjust profile picture size */
   .w-56 {
     width: 10rem !important;
     height: 10rem !important;

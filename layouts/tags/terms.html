@@ -4,7 +4,7 @@
     <h1 class="text-3xl font-bold mb-10">All Tags</h1>
     
     <div class="flex flex-wrap gap-3">
-      {{/* 先找出最大計數值用於計算顏色深度 */}}
+      {{/* Find maximum count value to calculate color depth */}}
       {{ $maxCount := 1 }}
       {{ range .Data.Terms.Alphabetical }}
         {{ if gt .Count $maxCount }}
@@ -13,7 +13,7 @@
       {{ end }}
       
       {{ range .Data.Terms.Alphabetical }}
-        {{/* 根據計數計算顏色強度 */}}
+        {{/* Calculate color intensity based on count */}}
         {{ $intensity := div (mul .Count 500) $maxCount }}
         {{ if lt $intensity 100 }}{{ $intensity = 100 }}{{ end }}
         {{ if gt $intensity 500 }}{{ $intensity = 500 }}{{ end }}

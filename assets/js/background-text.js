@@ -1,4 +1,4 @@
-// 背景小字效果模組（優化版）
+// Background text effects module (optimized)
 // assets/js/background-text.js
 
 window.BackgroundText = function() {
@@ -6,7 +6,7 @@ window.BackgroundText = function() {
   let bgTextElements = [];
   let typingInterval = null;
 
-  // 初始化
+  // Initialize the module
   this.init = function() {
     bgTextElements = Array.from(document.querySelectorAll('.bg-text'));
     
@@ -14,29 +14,29 @@ window.BackgroundText = function() {
       return;
     }
 
-    // 初始化每個背景文字元素
+    // Initialize each background text element
     bgTextElements.forEach((element, index) => {
       setupBgTextElement(element, index);
     });
 
-    // 開始自動 typing 效果
+    // Start automatic typing effect
     startAutoTyping();
     
-    // 開始隨機閃爍效果
+    // Start random flicker effect
     setTimeout(startRandomFlicker, 3000);
     
   };
 
-  // 設置背景文字元素
+  // Setup background text element
   function setupBgTextElement(element, index) {
     const originalText = element.textContent;
     element.dataset.originalText = originalText;
     element.dataset.index = index;
     
-    // 初始狀態
+    // Initial state
     element.style.opacity = '0';
     
-    // 隨機延遲顯示
+    // Random delay for display
     gsap.delayedCall(index * 0.2, function() {
       gsap.to(element, {
         opacity: 0.8,
@@ -46,27 +46,27 @@ window.BackgroundText = function() {
     });
   }
 
-  // 開始自動 typing 效果
+  // Start automatic typing animation
   function startAutoTyping() {
     if (typingInterval) clearInterval(typingInterval);
     
-    // 每 3-5 秒隨機選擇一個元素進行 typing 動畫
+    // Randomly select an element for typing animation every 3-5 seconds
     const startRandomTyping = () => {
       if (bgTextElements.length > 0) {
         const randomElement = bgTextElements[Math.floor(Math.random() * bgTextElements.length)];
         performTypingAnimation(randomElement);
       }
       
-      // 設置下次執行時間
-      const nextDelay = 3000 + Math.random() * 2000; // 3-5秒
+      // Schedule next execution
+      const nextDelay = 3000 + Math.random() * 2000; // 3-5 seconds
       setTimeout(startRandomTyping, nextDelay);
     };
     
-    // 初次延遲 2 秒後開始
+    // Initial delay of 2 seconds before starting
     setTimeout(startRandomTyping, 2000);
   }
 
-  // 執行 typing 動畫
+  // Execute typing animation
   function performTypingAnimation(element) {
     if (!element || element.classList.contains('typing-active')) return;
     
@@ -77,21 +77,21 @@ window.BackgroundText = function() {
     element.classList.add('typing-active');
     element.textContent = '';
     
-    // 創建 typing 時間軸
+    // Create typing timeline
     const timeline = gsap.timeline({
       onComplete: function() {
         element.classList.remove('typing-active');
       }
     });
 
-    // 逐字顯示效果
+    // Character-by-character display effect
     let currentText = '';
     for (let i = 0; i <= originalText.length; i++) {
       timeline.call(() => {
         currentText = originalText.substring(0, i);
         element.textContent = currentText;
         
-        // 閃爍光標效果
+        // Blinking cursor effect
         if (i < originalText.length) {
           element.textContent += '|';
           setTimeout(() => {
@@ -103,13 +103,13 @@ window.BackgroundText = function() {
       }, null, i * 0.1);
     }
 
-    // 完成後移除光標
+    // Remove cursor after completion
     timeline.call(() => {
       element.textContent = originalText;
     }, null, "+=0.5");
   }
 
-  // 隨機閃爍效果
+  // Random flicker effect
   function startRandomFlicker() {
     const flickerElement = () => {
       if (bgTextElements.length === 0) return;
@@ -125,15 +125,15 @@ window.BackgroundText = function() {
         }, 300);
       }
       
-      // 下次閃爍時間
-      const nextFlicker = 1000 + Math.random() * 3000; // 1-4秒
+      // Schedule next flicker
+      const nextFlicker = 1000 + Math.random() * 3000; // 1-4 seconds
       setTimeout(flickerElement, nextFlicker);
     };
     
     flickerElement();
   }
 
-  // 響應式處理
+  // Handle responsive adjustments
   this.handleResize = function() {
     const isMobile = window.innerWidth < 768;
     const isTablet = window.innerWidth < 1024;
@@ -149,15 +149,15 @@ window.BackgroundText = function() {
     });
   };
 
-  // 重置背景文字
+  // Reset background text to initial state
   this.reset = function() {
-    // 停止 typing 動畫
+    // Stop typing animation
     if (typingInterval) {
       clearInterval(typingInterval);
       typingInterval = null;
     }
     
-    // 重置所有元素狀態
+    // Reset all element states
     bgTextElements.forEach(element => {
       element.classList.remove('typing-active', 'flicker');
       element.textContent = element.dataset.originalText;
@@ -168,14 +168,14 @@ window.BackgroundText = function() {
       });
     });
     
-    // 重新開始自動效果
+    // Restart automatic effects
     startAutoTyping();
   };
 
-  // 活動文字變化回調（簡化版）
+  // Callback when active text changes (simplified)
   this.onActiveTextChange = function(newTextId, previousTextId) {
     if (newTextId) {
-      // 當有文字被選中時，可以添加一些簡單的效果
+      // Apply simple effects when text is selected
       bgTextElements.forEach(element => {
         gsap.to(element, {
           opacity: 0.6,
@@ -186,9 +186,9 @@ window.BackgroundText = function() {
     }
   };
 
-  // 活動文字清除回調
+  // Callback when active text is cleared
   this.onActiveTextClear = function(previousTextId) {
-    // 恢復原始透明度
+    // Restore original opacity
     bgTextElements.forEach(element => {
       gsap.to(element, {
         opacity: 0.8,
@@ -198,14 +198,14 @@ window.BackgroundText = function() {
     });
   };
 
-  // 公共方法：添加新的背景文字
+  // Public method: Add new background text
   this.addBackgroundText = function(text, style) {
     const element = document.createElement('div');
     element.className = 'bg-text';
     element.textContent = text;
     element.dataset.originalText = text;
     
-    // 應用樣式
+    // Apply styles
     if (style) {
       Object.assign(element.style, style);
     }
@@ -218,7 +218,7 @@ window.BackgroundText = function() {
     }
   };
 
-  // 公共方法：移除背景文字
+  // Public method: Remove background text
   this.removeBackgroundText = function(index) {
     if (index >= 0 && index < bgTextElements.length) {
       const element = bgTextElements[index];
@@ -227,13 +227,13 @@ window.BackgroundText = function() {
     }
   };
 
-  // 公共方法：立即觸發某個元素的 typing 動畫
+  // Public method: Trigger typing animation for a specific element
   this.triggerTyping = function(index) {
     if (index >= 0 && index < bgTextElements.length) {
       performTypingAnimation(bgTextElements[index]);
     }
   };
 
-  // 自動初始化
+  // Auto-initialize on module load
   this.init();
 };
