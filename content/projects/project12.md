@@ -1,9 +1,11 @@
 ---
-title: "IFC Model Checking Tasks"
+title: "IFC Model Checking Task"
 subtitle: "Building Information Modeling Fundamentals using Solibri"
 date: 2025-07-04
-
-tags: ["BIM", "IFC", "ModelChecking", "Munich"]
+unit: " Chair of Computing in Civil and Building Engineering, School of Engineering and Design, TUM"
+supervised: "Prof. Dr.-Ing. André Borrmann, Prof. Dr.-Ing. Sebastian Esser"
+Contributors: Personal Work 
+tags: ["Project", "BIM", "IFC", "ModelChecking", "Munich, Germany"]
 image: "/images/pj12-1.webp"
 description: "This task focuses on checking and validating an IFC model of a three-story office building. Students will apply BIM quality assurance methods using professional checking tools to detect design issues and propose effective improvements."
 ---

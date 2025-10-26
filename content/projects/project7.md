@@ -1,11 +1,11 @@
 ---
 title: "BIM.Fundamentals Modeling Task"
 subtitle: "Building Information Modeling Fundamentals "
-date: 2025-05-16
+date: 2025-06-12
 unit: " Chair of Computing in Civil and Building Engineering, School of Engineering and Design, TUM"
 supervised: "Prof. Dr.-Ing. André Borrmann, Prof. Dr.-Ing. Sebastian Esser"
 Contributors: Personal Work 
-tags: ["Project", "Architecture", "Semantic", "BIM", "Munich, Germany"]
+tags: ["Project","BIM", "IFC", "Semantic","Architecture", "Munich, Germany"]
 image: "/images/pj7-2.webp"
 description: "This project was part of the SS25 BIM Fundamental Course, aimed at developing a deeper understanding of the potential of Building Information Modeling (BIM) and the structure of the IFC schema. The assignment required us to create a semantically enriched and detailed BIM model."
 ---
