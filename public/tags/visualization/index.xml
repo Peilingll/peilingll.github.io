@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Visualization on PEILING SONG</title>
-    <link>http://localhost:51633/tags/visualization/</link>
+    <link>http://localhost:1313/tags/visualization/</link>
     <description>Recent content in Visualization on PEILING SONG</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 22 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:51633/tags/visualization/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/visualization/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Terra Vein</title>
-      <link>http://localhost:51633/projects/project4/</link>
+      <link>http://localhost:1313/projects/project4/</link>
       <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:51633/projects/project4/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This project was carried out in collaboration with &lt;a href=&#34;https://xrhub-bavaria.de/&#34;&gt;XR HUB Bavaria&lt;/a&gt;, focusing on the production of an animation themed around future energy. The final work was showcased in the dome theater at &lt;a href=&#34;https://www.1e9.community/festival-der-zukunft/2025/deutsch&#34;&gt;1E9 &amp;amp; Festival der Zukunft&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:51633/images/pj4.gif&#34; alt=&#34;Demo Animation&#34;&gt;&#xA;&lt;em&gt;&lt;a href=&#34;https://drive.google.com/file/d/1cmBN1STj06-iLnF-wBkBNgyE_9a5LTmO/view?usp=sharing&#34;&gt;Open Full Video&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;geothermal-energy&#34;&gt;Geothermal Energy&lt;/h2&gt;&#xA;&lt;p&gt;Unlike solar or wind, geothermal energy reveals itself in a tangible way—rising as steam from beneath the Earth, a direct expression of its deep heat. It’s not only a sustainable choice but also a profound connection to the planet’s elemental forces. Our vision contrasts the soft, ethereal plumes of steam with the structured pipes that carry it—symbolizing harmony between nature and engineering. Geothermal represents a livable, powerful rhythm of the Earth, shaping a future where cities breathe in sync with nature.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/projects/project4/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This project was carried out in collaboration with &lt;a href=&#34;https://xrhub-bavaria.de/&#34;&gt;XR HUB Bavaria&lt;/a&gt;, focusing on the production of an animation themed around future energy. The final work was showcased in the dome theater at &lt;a href=&#34;https://www.1e9.community/festival-der-zukunft/2025/deutsch&#34;&gt;1E9 &amp;amp; Festival der Zukunft&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/pj4.gif&#34; alt=&#34;Demo Animation&#34;&gt;&#xA;&lt;em&gt;&lt;a href=&#34;https://drive.google.com/file/d/1cmBN1STj06-iLnF-wBkBNgyE_9a5LTmO/view?usp=sharing&#34;&gt;Open Full Video&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;geothermal-energy&#34;&gt;Geothermal Energy&lt;/h2&gt;&#xA;&lt;p&gt;Unlike solar or wind, geothermal energy reveals itself in a tangible way—rising as steam from beneath the Earth, a direct expression of its deep heat. It’s not only a sustainable choice but also a profound connection to the planet’s elemental forces. Our vision contrasts the soft, ethereal plumes of steam with the structured pipes that carry it—symbolizing harmony between nature and engineering. Geothermal represents a livable, powerful rhythm of the Earth, shaping a future where cities breathe in sync with nature.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

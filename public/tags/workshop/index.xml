@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Workshop on PEILING SONG</title>
-    <link>http://localhost:51633/tags/workshop/</link>
+    <link>http://localhost:1313/tags/workshop/</link>
     <description>Recent content in Workshop on PEILING SONG</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 16 May 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:51633/tags/workshop/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/workshop/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2023 CAAD Workshop - RhinoVAULT Application</title>
-      <link>http://localhost:51633/projects/project8/</link>
+      <link>http://localhost:1313/projects/project8/</link>
       <pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:51633/projects/project8/</guid>
+      <guid>http://localhost:1313/projects/project8/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This workshop introduces the role of digital technology in contemporary architecture, focusing on the development and application of CAD/CAM tools, vibrating knife systems, and CNC technology. Participants will first explore the theoretical foundations, including how these tools transform the architectural design process. They will then gain hands-on experience, from CAD-based part design to operating vibrating knife and CNC machines for model making, working in groups to create small-scale structural prototypes. Finally, the workshop examines real-world cases, current challenges, and future trends, encouraging innovative thinking, critical discussion, and strategies for integrating digital fabrication technologies into architectural practice.&lt;/p&gt;</description>
     </item>
     <item>
       <title>2021 CAAD Workshop - KUKA Robotic Arm</title>
-      <link>http://localhost:51633/projects/project9/</link>
+      <link>http://localhost:1313/projects/project9/</link>
       <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:51633/projects/project9/</guid>
+      <guid>http://localhost:1313/projects/project9/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In the “KUKA Robotic Arm Workshop,” participants will learn to set up and operate a KUKA robotic arm, focusing on essential safety and operational guidelines. The workshop includes an introduction to basic programming, allowing attendees to understand and manipulate the arm’s controls.&lt;/p&gt;&#xA;&lt;p&gt;A key feature of the session is a hands-on exercise in robotic weaving, showcasing the arm’s precision and potential in digital manufacturing and design. This concise yet comprehensive workshop is an ideal introduction to the possibilities of robotic automation in creative and industrial applications.&lt;/p&gt;</description>
     </item>
   </channel>
