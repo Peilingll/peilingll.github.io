@@ -5,7 +5,7 @@ date: 2023-05-16
 
 
 
-tags: ["Workshop", "Architecture", "Semantic", "BIM", "Taiwan"]
+tags: ["Workshop", "Architecture", "CNC", "Parametric Design", "Taiwan"]
 image: "/images/pj8-1.webp"
 description: "This workshop introduces the role of digital technology in contemporary architecture, focusing on the development and application of CAD/CAM tools, vibrating knife systems, and CNC technology. Participants will first explore the theoretical foundations, including how these tools transform the architectural design process."
 ---

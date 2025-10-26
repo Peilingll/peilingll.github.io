@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CNC on PEILING SONG</title>
+    <link>http://localhost:1313/tags/cnc/</link>
+    <description>Recent content in CNC on PEILING SONG</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 May 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/cnc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023 CAAD Workshop - RhinoVAULT Application</title>
+      <link>http://localhost:1313/projects/project8/</link>
+      <pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/project8/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This workshop introduces the role of digital technology in contemporary architecture, focusing on the development and application of CAD/CAM tools, vibrating knife systems, and CNC technology. Participants will first explore the theoretical foundations, including how these tools transform the architectural design process. They will then gain hands-on experience, from CAD-based part design to operating vibrating knife and CNC machines for model making, working in groups to create small-scale structural prototypes. Finally, the workshop examines real-world cases, current challenges, and future trends, encouraging innovative thinking, critical discussion, and strategies for integrating digital fabrication technologies into architectural practice.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

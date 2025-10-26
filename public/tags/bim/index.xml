@@ -27,7 +27,7 @@
       <link>http://localhost:1313/projects/project7/</link>
       <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/project7/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This project was part of the SS25 BIM Fundamental Course, aimed at developing a deeper understanding of the potential of Building Information Modeling (BIM) and the structure of the IFC schema. The assignment required us to create a semantically enriched and detailed BIM model, acting simultaneously as designers and engineers. We carefully examined the structure, appearance, and material definitions of the model, ensuring semantic accuracy and consistency throughout. This process not only strengthened our modeling skills but also provided us with a solid foundation in comprehending the logic and framework of IFC-based data representation.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This project is the core practical assignment for the &amp;ldquo;BIM.Fundamentals&amp;rdquo; course in the Summer Term 2025 at the Technical University of Munich (TUM), School of Engineering and Design. The project aims to deeply explore the potential of Building Information Modeling (BIM) and to master the IFC data schema.&lt;/p&gt;&#xA;&lt;p&gt;This task requires the creation of a detailed, semantically enriched BIM model that adheres to specific shape requirements. The model&amp;rsquo;s structure, appearance, and material definitions must be strictly defined, ensuring semantic accuracy and data consistency throughout the development process.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Constraints Design in Timber Modular Process</title>
@@ -35,20 +35,6 @@
       <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/project6/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This project was developed during the &lt;strong&gt;&lt;a href=&#34;https://hackaec.com/events.html&#34;&gt;2024 AEC Hackathon Munich&lt;/a&gt;&lt;/strong&gt; and collabrated with  &lt;a href=&#34;https://www.tum-venture-labs.de/labs/built-environment/&#34;&gt;TUM Venture Lab Built Environment&lt;/a&gt;. We proposed a &lt;strong&gt;Constraint Design (CD)&lt;/strong&gt; model, introducing an intermediate abstract layer that integrates manufacturing and MEP requirements early in the design phase. By embedding constraints upfront, the approach reduces redesign efforts, improves collaboration and efficiency..&lt;/p&gt;&#xA;&lt;h2 id=&#34;hackathon-topics&#34;&gt;Hackathon Topics&lt;/h2&gt;&#xA;&lt;p&gt;The challenge from &lt;strong&gt;&lt;a href=&#34;https://www.dreso.com/de/&#34;&gt;Drees &amp;amp; Sommer&lt;/a&gt;&lt;/strong&gt; focused on timber modular design, where misaligned details between designers and manufacturers often cause costly redesigns. Our goal was to create an &lt;strong&gt;abstract intermediate model&lt;/strong&gt; that simplifies data exchange and coordination.&lt;br&gt;&#xA;&lt;img src=&#34;http://localhost:1313/images/pj6-6.webp&#34; alt=&#34;Dashboard&#34;&gt;&#xA;&lt;em&gt;Figure 1. Overview of the main challenge (sourced from Drees &amp;amp; Sommer)&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>2023 CAAD Workshop - RhinoVAULT Application</title>
-      <link>http://localhost:1313/projects/project8/</link>
-      <pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/project8/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This workshop introduces the role of digital technology in contemporary architecture, focusing on the development and application of CAD/CAM tools, vibrating knife systems, and CNC technology. Participants will first explore the theoretical foundations, including how these tools transform the architectural design process. They will then gain hands-on experience, from CAD-based part design to operating vibrating knife and CNC machines for model making, working in groups to create small-scale structural prototypes. Finally, the workshop examines real-world cases, current challenges, and future trends, encouraging innovative thinking, critical discussion, and strategies for integrating digital fabrication technologies into architectural practice.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>2021 CAAD Workshop - KUKA Robotic Arm</title>
-      <link>http://localhost:1313/projects/project9/</link>
-      <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/project9/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In the “KUKA Robotic Arm Workshop,” participants will learn to set up and operate a KUKA robotic arm, focusing on essential safety and operational guidelines. The workshop includes an introduction to basic programming, allowing attendees to understand and manipulate the arm’s controls.&lt;/p&gt;&#xA;&lt;p&gt;A key feature of the session is a hands-on exercise in robotic weaving, showcasing the arm’s precision and potential in digital manufacturing and design. This concise yet comprehensive workshop is an ideal introduction to the possibilities of robotic automation in creative and industrial applications.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

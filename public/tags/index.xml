@@ -128,6 +128,27 @@
       <description></description>
     </item>
     <item>
+      <title>IFC</title>
+      <link>http://localhost:1313/tags/ifc/</link>
+      <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ifc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ModelChecking</title>
+      <link>http://localhost:1313/tags/modelchecking/</link>
+      <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/modelchecking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Munich</title>
+      <link>http://localhost:1313/tags/munich/</link>
+      <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/munich/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>3D Modeling</title>
       <link>http://localhost:1313/tags/3d-modeling/</link>
       <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
@@ -191,6 +212,20 @@
       <description></description>
     </item>
     <item>
+      <title>CNC</title>
+      <link>http://localhost:1313/tags/cnc/</link>
+      <pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/cnc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Parametric Design</title>
+      <link>http://localhost:1313/tags/parametric-design/</link>
+      <pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/parametric-design/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Workshop</title>
       <link>http://localhost:1313/tags/workshop/</link>
       <pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate>
@@ -198,10 +233,10 @@
       <description></description>
     </item>
     <item>
-      <title>Parametric Design</title>
-      <link>http://localhost:1313/tags/parametric-design/</link>
-      <pubDate>Mon, 21 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/parametric-design/</guid>
+      <title>Robotic</title>
+      <link>http://localhost:1313/tags/robotic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/robotic/</guid>
       <description></description>
     </item>
   </channel>

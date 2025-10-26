@@ -1,9 +1,9 @@
 ---
 title: "2021 CAAD Workshop - KUKA Robotic Arm"
 subtitle: "Building Information Modeling Fundamentals "
-date: 2021-05-16
+date: 2021-05-08
 
-tags: ["Workshop", "Architecture", "Semantic", "BIM", "Taiwan"]
+tags: ["Workshop", "Robotics", "Parametric Design", "Taiwan"]
 image: "/images/pj9-1.webp"
 description: "This workshop introduces the role of digital technology in contemporary architecture, focusing on the development and application of CAD/CAM tools, vibrating knife systems, and CNC technology. Participants will first explore the theoretical foundations, including how these tools transform the architectural design process."
 ---

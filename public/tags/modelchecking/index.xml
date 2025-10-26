@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ModelChecking on PEILING SONG</title>
+    <link>http://localhost:1313/tags/modelchecking/</link>
+    <description>Recent content in ModelChecking on PEILING SONG</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 04 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/modelchecking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IFC Model Checking Tasks</title>
+      <link>http://localhost:1313/projects/project12/</link>
+      <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/project12/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In the “KUKA Robotic Arm Workshop,” participants will learn to set up and operate a KUKA robotic arm, focusing on essential safety and operational guidelines. The workshop includes an introduction to basic programming, allowing attendees to understand and manipulate the arm’s controls.&lt;/p&gt;&#xA;&lt;p&gt;A key feature of the session is a hands-on exercise in robotic weaving, showcasing the arm’s precision and potential in digital manufacturing and design. This concise yet comprehensive workshop is an ideal introduction to the possibilities of robotic automation in creative and industrial applications.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

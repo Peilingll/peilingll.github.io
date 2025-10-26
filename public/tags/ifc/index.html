@@ -45,16 +45,39 @@
   <header class="sticky top-0 z-50 bg-white/50 backdrop-blur border-b border-gray-200">
   <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
     <a href="/" class="text-2xl font-bold">PEILING</a>
-    <nav class="space-x-6 text-sm font-medium">
-      <a href="/#about" class="hover:underline transition-colors duration-200" style="color: inherit;" onmouseover="this.style.color='#7e6afc'" onmouseout="this.style.color='inherit'">About</a>
-      <a href="/#experience" class="hover:underline transition-colors duration-200" style="color: inherit;" onmouseover="this.style.color='#7e6afc'" onmouseout="this.style.color='inherit'">Experience</a>
-      <a href="/projects/" class="hover:underline transition-colors duration-200" style="color: inherit;" onmouseover="this.style.color='#7e6afc'" onmouseout="this.style.color='inherit'">Work & Research</a>
-      <a href="/blog/" class="hover:underline transition-colors duration-200" style="color: inherit;" onmouseover="this.style.color='#7e6afc'" onmouseout="this.style.color='inherit'">Blog</a>
-      <a href="/tags/" class="hover:underline transition-colors duration-200" style="color: inherit;" onmouseover="this.style.color='#7e6afc'" onmouseout="this.style.color='inherit'">Tags</a>
+    
+    
+    <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    
+    <nav class="space-x-6 text-sm font-medium" id="nav-menu">
+      <a href="/#about" class="hover:underline transition-colors duration-200" 
+         style="color: inherit;" 
+         onmouseover="this.style.color='#7e6afc'" 
+         onmouseout="this.style.color='inherit'">About</a>
+      <a href="/#experience" class="hover:underline transition-colors duration-200" 
+         style="color: inherit;" 
+         onmouseover="this.style.color='#7e6afc'" 
+         onmouseout="this.style.color='inherit'">Experience</a>
+      <a href="/projects/" class="hover:underline transition-colors duration-200" 
+         style="color: inherit;" 
+         onmouseover="this.style.color='#7e6afc'" 
+         onmouseout="this.style.color='inherit'">Work & Research</a>
+      <a href="/blog/" class="hover:underline transition-colors duration-200" 
+         style="color: inherit;" 
+         onmouseover="this.style.color='#7e6afc'" 
+         onmouseout="this.style.color='inherit'">Blog</a>
+      <a href="/tags/" class="hover:underline transition-colors duration-200" 
+         style="color: inherit;" 
+         onmouseover="this.style.color='#7e6afc'" 
+         onmouseout="this.style.color='inherit'">Tags</a>
     </nav>
   </div>
 </header>
-
 
   <main>
     
@@ -70,6 +93,46 @@
     
     
     <div class="divide-y divide-gray-200">
+      
+        <article class="py-8 group">
+          <div class="flex items-start justify-between">
+            
+            <time class="text-gray-500 font-mono text-sm mt-1 mr-8">
+              2025.07
+            </time>
+            
+            
+            <div class="flex-1">
+              <h2 class="text-xl font-medium mb-3 group-hover:text-[#7e6afc] transition-colors">
+                <a href="/projects/project12/">IFC Model Checking Tasks</a>
+              </h2>
+              
+              
+              <div class="flex flex-wrap gap-3">
+                
+                  <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    BIM
+                  </span>
+                
+                  <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    IFC
+                  </span>
+                
+                  <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    ModelChecking
+                  </span>
+                
+                  <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    Munich
+                  </span>
+                
+              </div>
+            </div>
+            
+            
+            
+          </div>
+        </article>
       
     </div>
   </div>
@@ -114,6 +177,10 @@
   
   
   <script src="/js/hero-balls.min.js" defer></script>
+
+  
+  
+  <script src="/js/hamburger-menu.min.js"></script>
 
   
 </body>

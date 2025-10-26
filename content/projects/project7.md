@@ -12,9 +12,62 @@ description: "This project was part of the SS25 BIM Fundamental Course, aimed at
 
 ## Introduction
 
-This project was part of the SS25 BIM Fundamental Course, aimed at developing a deeper understanding of the potential of Building Information Modeling (BIM) and the structure of the IFC schema. The assignment required us to create a semantically enriched and detailed BIM model, acting simultaneously as designers and engineers. We carefully examined the structure, appearance, and material definitions of the model, ensuring semantic accuracy and consistency throughout. This process not only strengthened our modeling skills but also provided us with a solid foundation in comprehending the logic and framework of IFC-based data representation.
+This project is the core practical assignment for the "BIM.Fundamentals" course in the Summer Term 2025 at the Technical University of Munich (TUM), School of Engineering and Design. The project aims to deeply explore the potential of Building Information Modeling (BIM) and to master the IFC data schema.
+
+This task requires the creation of a detailed, semantically enriched BIM model that adheres to specific shape requirements. The model's structure, appearance, and material definitions must be strictly defined, ensuring semantic accuracy and data consistency throughout the development process.
+
+## Technical and Execution
+
+This model strictly adheres to multiple technical specifications, focusing on the logic and framework of IFC data:
+
+### **IFC Spatial Structure**
+- Established a compliant spatial structure breakdown
+- Contains: **IfcProject**,**IfcSite**, **IfcBuilding**, **IfcBuildingStoreys**, **IfcSpaces**
+
+### **Core Building Components**
+- Fully implemented necessary building elements
+- Contains: **Walls**, **Windows** , **Columns**, **Doors**, **Beams**, **Roof**, **Slabs**, **Stairs** 
+
+### **Semantic Information**
+
+Accurately attached semantic attributes to enhance model intelligence:
+
+- **`LoadBearing`** (True/False) attribute:
+  - Applied to load-bearing components (walls, beams, columns)
+  - Ensures proper structural analysis and design verification
+
+- **`IsExternal`** (True/False) attribute:
+  - Defined for walls and doors
+  - Distinguishes between internal and external elements
+  - Supports energy analysis and building performance evaluation
+
+- **`IfcSpaces` properties**:
+  - All space objects have meaningful names
+  - Each space includes an `Area` property in its property sets
+  - Enables accurate space area calculations and documentation
+
+### **Specific Design Requirements**
+
+- **High-ceiling hall**: 
+  - Designed a training/conference hall spanning at least two stories
+  - Demonstrates multi-level spatial modeling capabilities
+
+- **Non-structural glazing facade**:
+  - Applied to one side of the building
+  - Showcases curtain wall system implementation
+
+- **Furniture placement**:
+  - Placed appropriate furniture on at least two stories
+  - Ensured zero geometric clashes with building elements
+
+### **Deliverable Standards**
+
+- Format: IFC 4 Reference View Model View Definition (MVD)
+- Quantities: Base Quantities exported (volume and area)
+- Scope: Complete coverage for all building objects and spaces
 
 ![Dashboard](/images/pj7-3.webp)
+*Figure 1. Open IFC Viewer*
 
 <div class="not-prose" 
      style="display: flex; gap: 1rem; margin: 1rem auto; width: 80%; justify-content: center;">

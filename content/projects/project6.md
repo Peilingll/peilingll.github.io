@@ -31,13 +31,13 @@ To simplify early design, complex BIM geometry is abstracted into bounding boxes
 ## Constraints Integration with Speckle 
 The model is connected to the Speckle platform, a collaborative data hub that enables real-time exchange across different BIM tools. Similar to GitHub for AEC data, Speckle supports version control and structured data management, allowing designers, manufacturers, and MEP stakeholders to add and synchronize constraints seamlessly.  
 ![Dashboard](/images/pj6-9.webp)
-*Figure 4. The process of data storage and reconstruction in Speckle.*
+*Figure 4. The process of data storage and reconstruction in Speckle (sourced from Speckle Docs)*
 
 
 ## Revit Plug-In as Prototype
 We built a Python-based Revit plug-in using pyRevit to implement the Constraint Design model. One function converts design entities into bounding-box models for constraint integration via Speckle, while the other retrieves and visualizes modified constraints directly in Revit through the Speckle API and uses GraphQL (Graph Query Language) to query from structured data, and employs Python's Json API to retrieve data from the web interface and return it to the plugin script. This enables real-time collaboration between designers and manufacturers.
 ![Dashboard](/images/pj6-11.webp)
-*Figure 5. The process of data storage and reconstruction in Speckle.*
+*Figure 5. The process of data storage and reconstruction in Speckle (sourced from Speckle Docs)*
 
 ## Application Scenario
 The bounding box contains the diameter of a hole, with the designer initially setting the hole diameter to "10mm." However, the manufacturer's machine tool can only provide a hole of size less than "8mm," so the bounding box dimensions are adjusted by manufacturer. This new bounding box is visualized on the designer's end, prompting the designer to adjust the hole diameter to the new range. When multiple constraints (for example the MEP planner suggests a diameter of more than “9mm”) exist for an object, the designer must further consider constraint conflict.
