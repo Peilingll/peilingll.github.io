@@ -1,11 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>IFC on PEILING SONG</title>
-    <link>http://localhost:1313/tags/ifc/</link>
-    <description>Recent content in IFC on PEILING SONG</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="http://localhost:1313/tags/ifc/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IFC on PEILING SONG</title><link>https://peilingsong.org/tags/ifc/</link><description>Recent content in IFC on PEILING SONG</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 26 Oct 2025 22:08:07 +0100</lastBuildDate><atom:link href="https://peilingsong.org/tags/ifc/index.xml" rel="self" type="application/rss+xml"/><item><title>IFC Model Checking Tasks</title><link>https://peilingsong.org/projects/project12/</link><pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate><guid>https://peilingsong.org/projects/project12/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This task focuses on checking and validating an IFC model of a three-story office building. Students will apply BIM quality assurance methods using professional checking tools to detect design issues and propose effective improvements.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://peilingsong.org/images/pj12-1.webp" alt="Dashboard"&gt;
+&lt;em&gt;Figure 1. Model Checking in Solibri&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id="checking-tasks"&gt;Checking Tasks&lt;/h2&gt;
+&lt;h1 id="door-clearance-check"&gt;Door Clearance Check&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Detect doors where clearance requirements are not fulfilled due to nearby furniture.&lt;/li&gt;
+&lt;li&gt;Suggest repositioning or resizing furniture to restore accessibility.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="window-area-ratio-check"&gt;Window Area Ratio Check&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensure window-to-space area ratio does not exceed 50% in office spaces.&lt;/li&gt;
+&lt;li&gt;Adjust window sizing or space planning to meet the requirement.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="space-accessibility-check"&gt;Space Accessibility Check&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Identify office spaces that are completely inaccessible.&lt;/li&gt;
+&lt;li&gt;Provide alternative circulation or openings to ensure accessibility.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="space-area-check"&gt;Space Area Check&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Check confidential meeting rooms smaller than 5 m².&lt;/li&gt;
+&lt;li&gt;Increase room size to comply with functional requirements.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="wrong-property-set-check"&gt;Wrong Property Set Check&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Detect inner walls incorrectly marked as external (&lt;code&gt;IsExternal = true&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Correct property assignment for accurate building envelope definition.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="ifc-model-checking-report"&gt;IFC Model Checking Report&lt;/h2&gt;
+&lt;div class="not-prose" 
+ style="margin-top: 0.5rem; max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 2rem; padding-right: 2rem; width: 100%;"&gt;
+ &lt;!-- iframe --&gt;
+ &lt;iframe src="https://peilingsong.org/documents/Solibri.pdf" 
+ width="100%" 
+ height="600px" 
+ style="border: 1px solid #ddd; border-radius: 8px;"
+ title="Solibri Report PDF"&gt;
+ &lt;p&gt;Your browser does not support PDF preview. Please &lt;a href="https://peilingsong.org/documents/Solibri.pdf" target="_blank"&gt;click here to download the full Report&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>
