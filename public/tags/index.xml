@@ -142,10 +142,10 @@
       <description></description>
     </item>
     <item>
-      <title>Munich</title>
-      <link>http://localhost:1313/tags/munich/</link>
-      <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/munich/</guid>
+      <title>Architecture</title>
+      <link>http://localhost:1313/tags/architecture/</link>
+      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/architecture/</guid>
       <description></description>
     </item>
     <item>
@@ -167,13 +167,6 @@
       <link>http://localhost:1313/tags/visualization/</link>
       <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/visualization/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Architecture</title>
-      <link>http://localhost:1313/tags/architecture/</link>
-      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/architecture/</guid>
       <description></description>
     </item>
     <item>
@@ -214,21 +207,21 @@
     <item>
       <title>CNC</title>
       <link>http://localhost:1313/tags/cnc/</link>
-      <pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/cnc/</guid>
       <description></description>
     </item>
     <item>
       <title>Parametric Design</title>
       <link>http://localhost:1313/tags/parametric-design/</link>
-      <pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/parametric-design/</guid>
       <description></description>
     </item>
     <item>
       <title>Workshop</title>
       <link>http://localhost:1313/tags/workshop/</link>
-      <pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/workshop/</guid>
       <description></description>
     </item>

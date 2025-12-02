@@ -89,8 +89,11 @@
     <loc>http://localhost:1313/tags/modelchecking/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/munich/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/architecture/</loc>
+    <lastmod>2025-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/projects/project7/</loc>
+    <lastmod>2025-06-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/3d-modeling/</loc>
     <lastmod>2025-05-22T00:00:00+00:00</lastmod>
@@ -103,12 +106,6 @@
   </url><url>
     <loc>http://localhost:1313/tags/visualization/</loc>
     <lastmod>2025-05-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/architecture/</loc>
-    <lastmod>2025-05-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/projects/project7/</loc>
-    <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/aec/</loc>
     <lastmod>2024-11-09T00:00:00+00:00</lastmod>
@@ -132,16 +129,16 @@
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/projects/project8/</loc>
-    <lastmod>2023-05-16T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/cnc/</loc>
-    <lastmod>2023-05-16T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/parametric-design/</loc>
-    <lastmod>2023-05-16T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/workshop/</loc>
-    <lastmod>2023-05-16T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/projects/project11/</loc>
     <lastmod>2022-11-21T00:00:00+00:00</lastmod>

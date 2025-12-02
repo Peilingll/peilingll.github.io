@@ -172,8 +172,7 @@
 <h2 id="methodology">Methodology</h2>
 <ol>
 <li>
-<p><strong>Device Setup</strong><br>
-The Unitree Go2 robot is equipped with a LiDAR sensor and an onboard mini-PC, enabling autonomous navigation and real-time data acquisition.</p>
+<p><strong>Device Setup</strong>The Unitree Go2 robot is equipped with a LiDAR sensor and an onboard mini-PC, enabling autonomous navigation and real-time data acquisition.</p>
 </li>
 <li>
 <p><strong>Real-Time Data Processing</strong></p>
@@ -184,7 +183,7 @@ The Unitree Go2 robot is equipped with a LiDAR sensor and an onboard mini-PC, en
 </ul>
 </li>
 <li>
-<p><strong>Export</strong><br>
+<p><strong>Export</strong>
 The reconstructed model is exported in IFC format, ensuring interoperability with BIM workflows and downstream applications in architecture, engineering, and construction.</p>
 </li>
 </ol>
@@ -209,50 +208,56 @@ The reconstructed model is exported in IFC format, ensuring interoperability wit
 <p><img src="/images/pj1-4.webp" alt="Dashboard">
 <em>Figure 5. Point Cloud from Field Survey Trial</em></p>
 <h2 id="data-processing">Data Processing </h2>
+<p><img src="/images/pj1-8.webp" alt="Dashboard">
+<em>Figure 6. Autometically Real-Time Data Processing Pipeline</em></p>
 <h3 id="semantic-segmentation-framework">Semantic Segmentation Framework</h3>
 <ol>
 <li>
-<p><strong>View Generation</strong><br>
-The raw point cloud is randomly cropped and masked to produce global, local, and masked views, allowing the model to learn from incomplete spatial perspectives.</p>
+<p><strong>View Generation</strong>The raw point cloud is randomly cropped and masked to produce global, local, and masked views, allowing the model to learn from incomplete spatial perspectives.</p>
 </li>
 <li>
 <p><strong>Dual Encoder Framework</strong></p>
 <p>Two encoders based on <strong>Point Transformer V3 (PTv3)</strong> are trained in parallel, with weights synchronized through <strong>Exponential Moving Average (EMA)</strong> to ensure stable convergence.</p>
 </li>
 <li>
-<p><strong>Self-Distillation</strong><br>
+<p><strong>Self-Distillation</strong>
 Reference and query encoders align their features using <strong>Sinkhorn-Knopp Centering</strong>, producing consistent embeddings for robust representation learning.</p>
 </li>
 </ol>
 <p>The resulting learned features provide a strong foundation for accurate and efficient semantic segmentation of complex 3D environments.
 <img src="/images/pj1-5.webp" alt="Dashboard">
-<em>Figure 6. Semantic segmentation preprocessing</em></p>
+<em>Figure 7. Semantic segmentation preprocessing</em></p>
 <h3 id="point-cloud-classification">Point Cloud Classification</h3>
 <p>We implement a <strong>semantic segmentation pipeline</strong> to classify point cloud data of the built environment. The process begins with subsampling the raw point cloud and estimating surface <strong>normals using KNN</strong>. <strong>Floor and ceiling surfaces</strong> are then automatically extracted by analyzing normal orientations and clustering points with <strong>DBSCAN</strong> to form large planar regions. The <strong>remaining points</strong> are classified using a deep learning model trained on the <strong>ScanNet-20 dataset</strong>, predicting semantic categories such as <strong>walls, furniture, and doors</strong>.  Finally, the results are merged and exported as a <strong>classified PLY file</strong>, providing a structured and interpretable 3D representation.</p>
 <p><img src="/images/pj1-6.webp" alt="Dashboard">
-<em>Figure 7. Semantic segmentation preprocessing</em></p>
+<em>Figure 8. Semantic segmentation preprocessing</em></p>
 <h3 id="geometric-modeling">Geometric Modeling</h3>
-<p>In this step, we generate a simplified 3D model from point cloud data. For floors, we use RANSAC to reduce noise and focus on the main surface. For walls—we apply DBSCAN clustering to g separate disconnected wall segments and use interquartile range (IQR) filtering to remove Z-axis outliers. Next, split the XY plane into grids. and an axis-aligned bounding box is generated for each cell. Then, these bounding boxes are used to build the 3D geometry model and export it as an OBJ file. In the next phase, we plan to convert it to an IFC</p>
+<p>In this step, he process begins with RANSAC plane fitting and verticality constraints, reinforced by DBSCAN to filter out noise. We then derive the precise geometry of wall segments using Oriented Bounding Boxes (OBB). To ensure architectural accuracy, we apply Manhattan Alignment for orthogonalization before instantiating the data as IfcWall entities, delivering a standard-compliant IFC export.</p>
 <p><img src="/images/pj1-7.webp" alt="Dashboard">
-<em>Figure 8. Geometric Modeling</em></p>
+<em>Figure 9. Geometric Modeling</em></p>
+<h2 id="data-processing-1">Data Processing</h2>
+<div class="not-prose" 
+     style="display: flex; gap: 1rem; margin: 1rem auto; width: 80%; justify-content: center;">
+  <div style="flex: 1; text-align: center;">
+    <img src="/images/pj1-wall.gif" alt="Dashboard" style="width:100%; border-radius: 8px;" />
+    <p style="color: gray; font-style: italic; font-size: 0.875rem; margin-top: 0.5rem; text-align: center;">
+      Figure 10. RANSAC Per Wall
+  </div>
+  <div style="flex: 1; text-align: center;">
+    <img src="/images/pj1-ifc.gif" alt="Dashboard" style="width:100%; border-radius: 8px;" />
+    <p style="color: gray; font-style: italic; font-size: 0.875rem; margin-top: 0.5rem; text-align: center;">
+      Figure 11. Real-Time .ifc Model
+    </p>
+  </div>
+</div>
 <h2 id="future-work">Future Work</h2>
 <ul>
-<li>
-<p><strong>Integrate door and window classification</strong><br>
-Detect and label fixtures for richer BIM outputs.</p>
-</li>
-<li>
-<p><strong>Full Geometry-to-IFC Pipeline</strong><br>
-Convert extracted primitives into <strong>IfcWall</strong>, <strong>IfcSlab</strong>, and <strong>IfcFurnishingElements</strong> automatically.</p>
-</li>
-<li>
-<p><strong>Real-Time Process Orchestration</strong><br>
-Stream SLAM &gt; Segmentation &gt; Bounding-box fitting &gt; IFC export in a single workflow.</p>
-</li>
-<li>
-<p><strong>Hardware Upgrade: Camera Fusion</strong><br>
-Combine LiDAR with RGB/depth cameras for improved coverage and texture capture.</p>
-</li>
+<li><strong>Integrate door and window classification</strong><br>
+Detect and label fixtures for richer BIM outputs.</li>
+<li><strong>Full Geometry-to-IFC Pipeline</strong><br>
+Convert extracted primitives into <strong>IfcWall</strong>, <strong>IfcSlab</strong>, and <strong>IfcFurnishingElements</strong> automatically.</li>
+<li><strong>Hardware Upgrade: Camera Fusion</strong><br>
+Combine LiDAR with RGB/depth cameras for improved coverage and texture capture.</li>
 </ul>
 <h2 id="references">References</h2>
 <hr>
