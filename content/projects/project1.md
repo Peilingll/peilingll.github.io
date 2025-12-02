@@ -11,8 +11,8 @@ tags: ["Project", "Point Cloud", "Simulation", "Semantic", "Robotics", "Munich, 
 image: "/images/pj1-4.webp"
 description: "The project is designed to capture and process real-time spatial data of the built environment by integrating advanced sensing technologies, such as LiDAR and an RGB-D camera, onto a robotic platform."
 ---
-
 ## Introduction
+
 The project is designed to capture and process real-time spatial data of the built environment by integrating advanced sensing technologies, such as LiDAR and an RGB-D camera, onto a robotic platform. These sensors work in unison to collect high-quality spatial and visual data, which is then seamlessly streamed using the Robot Operating System (ROS). ROS facilitates the efficient handling of sensor data, enabling real-time processing through advanced algorithms that reconstruct the environment's geometry with precision. By combining robotics, state-of-the-art sensors, advanced point cloud processing techniques, and real-time computation, the project aims to provide accurate and dynamic spatial mapping solutions, offering a robust foundation for appli￾cations in fields such as architecture, urban planning, and autonomous navigation.
 
 ![Dashboard](/images/pj1.gif)
@@ -20,22 +20,20 @@ The project is designed to capture and process real-time spatial data of the bui
 
 ## Methodology
 
+1. **Device Setup**The Unitree Go2 robot is equipped with a LiDAR sensor and an onboard mini-PC, enabling autonomous navigation and real-time data acquisition.
+2. **Real-Time Data Processing**
 
-1. **Device Setup**  
-   The Unitree Go2 robot is equipped with a LiDAR sensor and an onboard mini-PC, enabling autonomous navigation and real-time data acquisition.  
-
-2. **Real-Time Data Processing**  
-   - **Data Collection**: Capturing raw point cloud data of the built environment.  
-   - **Preprocessing**: Applying semantic segmentation to classify and refine spatial elements.  
-   - **Transformation**: Converting segmented data into structured geometric models.  
-
-3. **Export**  
-   The reconstructed model is exported in IFC format, ensuring interoperability with BIM workflows and downstream applications in architecture, engineering, and construction.  
+   - **Data Collection**: Capturing raw point cloud data of the built environment.
+   - **Preprocessing**: Applying semantic segmentation to classify and refine spatial elements.
+   - **Transformation**: Converting segmented data into structured geometric models.
+3. **Export**
+   The reconstructed model is exported in IFC format, ensuring interoperability with BIM workflows and downstream applications in architecture, engineering, and construction.
 
 ![Dashboard](/images/pj1-1.webp)
 *Figure 2. Methodology*
 
 ## Device Setup
+
 <div class="not-prose" 
      style="display: flex; gap: 1rem; margin: 1rem auto; width: 80%; justify-content: center;">
   <div style="flex: 1; text-align: center;">
@@ -51,61 +49,70 @@ The project is designed to capture and process real-time spatial data of the bui
   </div>
 </div>
 
+## Data Collection
 
-## Data Collection 
 ![Dashboard](/images/pj1-4.webp)
 *Figure 5. Point Cloud from Field Survey Trial*
 
-## Data Processing  
+## Data Processing 
+![Dashboard](/images/pj1-8.webp)
+*Figure 6. Autometically Real-Time Data Processing Pipeline*
 
 ### Semantic Segmentation Framework
 
-1. **View Generation**  
-   The raw point cloud is randomly cropped and masked to produce global, local, and masked views, allowing the model to learn from incomplete spatial perspectives.  
-
+1. **View Generation**The raw point cloud is randomly cropped and masked to produce global, local, and masked views, allowing the model to learn from incomplete spatial perspectives.
 2. **Dual Encoder Framework**
-   
-   Two encoders based on **Point Transformer V3 (PTv3)** are trained in parallel, with weights synchronized through **Exponential Moving Average (EMA)** to ensure stable convergence.  
 
-3. **Self-Distillation**  
-   Reference and query encoders align their features using **Sinkhorn-Knopp Centering**, producing consistent embeddings for robust representation learning.  
-
+   Two encoders based on **Point Transformer V3 (PTv3)** are trained in parallel, with weights synchronized through **Exponential Moving Average (EMA)** to ensure stable convergence.
+3. **Self-Distillation**
+   Reference and query encoders align their features using **Sinkhorn-Knopp Centering**, producing consistent embeddings for robust representation learning.
 
 The resulting learned features provide a strong foundation for accurate and efficient semantic segmentation of complex 3D environments.
 ![Dashboard](/images/pj1-5.webp)
-*Figure 6. Semantic segmentation preprocessing*  
-
+*Figure 7. Semantic segmentation preprocessing*
 
 ### Point Cloud Classification
 
-We implement a **semantic segmentation pipeline** to classify point cloud data of the built environment. The process begins with subsampling the raw point cloud and estimating surface **normals using KNN**. **Floor and ceiling surfaces** are then automatically extracted by analyzing normal orientations and clustering points with **DBSCAN** to form large planar regions. The **remaining points** are classified using a deep learning model trained on the **ScanNet-20 dataset**, predicting semantic categories such as **walls, furniture, and doors**.  Finally, the results are merged and exported as a **classified PLY file**, providing a structured and interpretable 3D representation.  
-
+We implement a **semantic segmentation pipeline** to classify point cloud data of the built environment. The process begins with subsampling the raw point cloud and estimating surface **normals using KNN**. **Floor and ceiling surfaces** are then automatically extracted by analyzing normal orientations and clustering points with **DBSCAN** to form large planar regions. The **remaining points** are classified using a deep learning model trained on the **ScanNet-20 dataset**, predicting semantic categories such as **walls, furniture, and doors**.  Finally, the results are merged and exported as a **classified PLY file**, providing a structured and interpretable 3D representation.
 
 ![Dashboard](/images/pj1-6.webp)
-*Figure 7. Semantic segmentation preprocessing*
+*Figure 8. Semantic segmentation preprocessing*
 
 ### Geometric Modeling
-In this step, we generate a simplified 3D model from point cloud data. For floors, we use RANSAC to reduce noise and focus on the main surface. For walls—we apply DBSCAN clustering to g separate disconnected wall segments and use interquartile range (IQR) filtering to remove Z-axis outliers. Next, split the XY plane into grids. and an axis-aligned bounding box is generated for each cell. Then, these bounding boxes are used to build the 3D geometry model and export it as an OBJ file. In the next phase, we plan to convert it to an IFC 
+
+In this step, he process begins with RANSAC plane fitting and verticality constraints, reinforced by DBSCAN to filter out noise. We then derive the precise geometry of wall segments using Oriented Bounding Boxes (OBB). To ensure architectural accuracy, we apply Manhattan Alignment for orthogonalization before instantiating the data as IfcWall entities, delivering a standard-compliant IFC export.
 
 ![Dashboard](/images/pj1-7.webp)
-*Figure 8. Geometric Modeling*
+*Figure 9. Geometric Modeling*
+
+## Data Processing
+<div class="not-prose" 
+     style="display: flex; gap: 1rem; margin: 1rem auto; width: 80%; justify-content: center;">
+  <div style="flex: 1; text-align: center;">
+    <img src="/images/pj1-wall.gif" alt="Dashboard" style="width:100%; border-radius: 8px;" />
+    <p style="color: gray; font-style: italic; font-size: 0.875rem; margin-top: 0.5rem; text-align: center;">
+      Figure 10. RANSAC Per Wall
+  </div>
+  <div style="flex: 1; text-align: center;">
+    <img src="/images/pj1-ifc.gif" alt="Dashboard" style="width:100%; border-radius: 8px;" />
+    <p style="color: gray; font-style: italic; font-size: 0.875rem; margin-top: 0.5rem; text-align: center;">
+      Figure 11. Real-Time .ifc Model
+    </p>
+  </div>
+</div>
 
 ## Future Work
 
-- **Integrate door and window classification**  
-  Detect and label fixtures for richer BIM outputs.  
-
-- **Full Geometry-to-IFC Pipeline**  
-  Convert extracted primitives into **IfcWall**, **IfcSlab**, and **IfcFurnishingElements** automatically.  
-
-- **Real-Time Process Orchestration**  
-  Stream SLAM > Segmentation > Bounding-box fitting > IFC export in a single workflow.  
-
-- **Hardware Upgrade: Camera Fusion**  
-  Combine LiDAR with RGB/depth cameras for improved coverage and texture capture.  
+- **Integrate door and window classification**<br>
+  Detect and label fixtures for richer BIM outputs.
+- **Full Geometry-to-IFC Pipeline**<br>
+  Convert extracted primitives into **IfcWall**, **IfcSlab**, and **IfcFurnishingElements** automatically.
+- **Hardware Upgrade: Camera Fusion**<br>
+  Combine LiDAR with RGB/depth cameras for improved coverage and texture capture.
 
 ## References
-****
+
+---
 
 <div style="margin-bottom:0.8em; padding-left:2em; text-indent:-2em;">
 [1] Dong, S., Xu, K., Zhou, Q., Tagliasacchi, A., Xin, S., Nießner, M., & Chen, B. (2019). Multi-robot collaborative dense scene reconstruction. <i>ACM Transactions on Graphics (TOG), 38</i>(4), 1–16. https://doi.org/10.1145/3306346.3322997
@@ -150,4 +157,3 @@ In this step, we generate a simplified 3D model from point cloud data. For floor
 <div style="margin-bottom:0.8em; padding-left:2em; text-indent:-2em;">
 [11] Mohanarajah, G., Usenko, V., Singh, M., D’Andrea, R., & Waibel, M. (2015). Cloud-based collaborative 3D mapping in real time with low-cost robots. <i>IEEE Transactions on Automation Science and Engineering, 12</i>(2), 423–431. https://doi.org/10.1109/TASE.2014.2368991
 </div>
-
