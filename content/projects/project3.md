@@ -21,7 +21,7 @@ The aim of this project is to classify dominant tree species across Germany by l
 <div class="not-prose" 
      style="margin-top: 0.5rem; max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 2rem; padding-right: 2rem; width: 100%;">
   
-  <!-- 方法1: iframe 嵌入 -->
+  <!-- iframe -->
   <iframe src="/documents/25SS_DSEO_Report.pdf" 
           width="100%" 
           height="600px" 
@@ -30,7 +30,7 @@ The aim of this project is to classify dominant tree species across Germany by l
     <p>Your browser does not support PDF preview. Please <a href="/documents/25SS_DSEO_Report.pdf" target="_blank">click here to download the full report</a>.</p>
   </iframe>
   
-  <!-- 備用下載連結 -->
+  <!-- Download Link -->
   <div style="text-align: center; margin-top: 1rem;">
     <a href="/documents/25SS_DSEO_Report.pdf" 
        target="_blank" 

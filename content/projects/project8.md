@@ -1,7 +1,7 @@
 ---
 title: "2023 CAAD Workshop - RhinoVAULT Application"
 subtitle: "Building Information Modeling Fundamentals "
-date: 2023-05-16
+date: 2023-03-09
 
 
 

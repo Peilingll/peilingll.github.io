@@ -18,7 +18,7 @@ The overall analysis shows that resource allocation and flexibility strategies s
 
 ## Project Report
 
-<!-- 方法1: iframe 嵌入 -->
+<!-- iframe  -->
   <iframe src="/documents/pj5.pdf" 
           width="100%" 
           height="600px" 
@@ -27,7 +27,7 @@ The overall analysis shows that resource allocation and flexibility strategies s
     <p>Your browser does not support PDF preview. Please <a href="/documents/pj5.pdf" target="_blank">click here to download the full report</a>.</p>
   </iframe>
   
-  <!-- 備用下載連結 -->
+  <!-- Download Link -->
   <div style="text-align: center; margin-top: 1rem;">
     <a href="/documents/pj5.pdf" 
        target="_blank" 
