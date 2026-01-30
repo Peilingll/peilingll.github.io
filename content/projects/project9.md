@@ -1,13 +1,12 @@
 ---
-title: "2021 CAAD Workshop - KUKA Robotic Arm"
+title: "2022 CAAD Workshop - KUKA Robotic Arm"
 subtitle: "Building Information Modeling Fundamentals "
-date: 2021-05-08
+date: 2022-05-08
 
 tags: ["Workshop", "Robotics", "Parametric Design", "Taiwan"]
 image: "/images/pj9-1.webp"
 description: "This workshop introduces the role of digital technology in contemporary architecture, focusing on the development and application of CAD/CAM tools, vibrating knife systems, and CNC technology. Participants will first explore the theoretical foundations, including how these tools transform the architectural design process."
 ---
-
 ## Introduction
 
 In the “KUKA Robotic Arm Workshop,” participants will learn to set up and operate a KUKA robotic arm, focusing on essential safety and operational guidelines. The workshop includes an introduction to basic programming, allowing attendees to understand and manipulate the arm’s controls.

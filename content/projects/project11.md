@@ -1,13 +1,12 @@
 ---
 title: "Rise Thatch Resort"
 subtitle: "Bamboo & Straw Resort | Rhino/Grasshopper Parametric Design"
-date: 2022-11-21
+date: 2021-03-21
 Contributors: Personal work
 tags: ["Portfolio", "Architecture","Parametric Design", "Taiwan"]
 image: "/images/pj11-1.webp"
 description: "The project situated in the heart of Taoyuan’s agricultural district. Designed with sustainability in mind, it utilizes local materials such as bamboo and rice straw, reflecting the surrounding landscape of rice fields. The resort’s architecture seamlessly blends with the natural environment, providing guests with a tranquil and authentic rural experience."
 ---
-
 The project situated in the heart of Taoyuan’s agricultural district. Designed with sustainability in mind, it utilizes local materials such as bamboo and rice straw, reflecting the surrounding landscape of rice fields. The resort’s architecture seamlessly blends with the natural environment, providing guests with a tranquil and authentic rural experience.
 
 <div class="not-prose" 
