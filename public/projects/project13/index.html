@@ -85,26 +85,26 @@
   
   
   <header class="mb-10">
-    <h1 class="text-4xl font-bold mb-2">Indoor Ambient Monitoring</h1>
+    <h1 class="text-4xl font-bold mb-2">Context-Aware Digital Twin Driven by Hybrid RAG</h1>
     
     
-      <h2 class="text-xl text-gray-700 mb-2">Geo Sensor Web and the Internet of Things</h2>
+      <h2 class="text-xl text-gray-700 mb-2">WS2025/26 Fusion Lab - BIM-GIS Integration with AI-Powered Spatial Intelligence</h2>
     
     
     <p class="text-sm text-gray-500 mb-4">
-      July 15, 2025
+      January 30, 2026
     </p>
 
     
-      <p class="text-sm text-gray-700"><strong>Unit:</strong> Chair of Geoinformatics, School of Engineering and Design, TUM</p>
+      <p class="text-sm text-gray-700"><strong>Unit:</strong> Chair of Computational Modeling and Simulation, School of Engineering and Design, TUM</p>
     
 
     
-      <p class="text-sm text-gray-700"><strong>Supervised by:</strong> Univ.-Prof. Dr. rer. nat. Thomas H. Kolbe, Joseph Gitahi, M.Sc., Benedikt Schwab, M.Sc.</p>
+      <p class="text-sm text-gray-700"><strong>Supervised by:</strong> Prof. Dr.-Ing. André Borrmann</p>
     
 
     
-      <p class="text-sm text-gray-700"><strong>Contributors:</strong> Pei-Ling Song, Meng-Ju Hsieh, Kit-Lung Chan</p>
+      <p class="text-sm text-gray-700"><strong>Contributors:</strong>  Pei-Ling Song, Meng-Ju Hsieh, Hongyu Jiang, Omar Haddadin, Mohamed Ali</p>
     
 
     
@@ -119,20 +119,28 @@
            #Project
         </a>
       
-        <a href="/tags/iot" 
-           class="text-decoration font-medium"
-           style="color: #7e6afc; text-decoration: none;"
-           onmouseover="this.style.color='#FACC15'; this.style.textDecoration='underline';"
-           onmouseout="this.style.color='#7e6afc'; this.style.textDecoration='none';">
-           #IoT
-        </a>
-      
         <a href="/tags/bim" 
            class="text-decoration font-medium"
            style="color: #7e6afc; text-decoration: none;"
            onmouseover="this.style.color='#FACC15'; this.style.textDecoration='underline';"
            onmouseout="this.style.color='#7e6afc'; this.style.textDecoration='none';">
            #BIM
+        </a>
+      
+        <a href="/tags/ifc" 
+           class="text-decoration font-medium"
+           style="color: #7e6afc; text-decoration: none;"
+           onmouseover="this.style.color='#FACC15'; this.style.textDecoration='underline';"
+           onmouseout="this.style.color='#7e6afc'; this.style.textDecoration='none';">
+           #IFC
+        </a>
+      
+        <a href="/tags/digital-twin" 
+           class="text-decoration font-medium"
+           style="color: #7e6afc; text-decoration: none;"
+           onmouseover="this.style.color='#FACC15'; this.style.textDecoration='underline';"
+           onmouseout="this.style.color='#7e6afc'; this.style.textDecoration='none';">
+           #Digital Twin
         </a>
       
         <a href="/tags/smart-building" 
@@ -143,12 +151,20 @@
            #Smart Building
         </a>
       
-        <a href="/tags/digital-twin" 
+        <a href="/tags/data-science" 
            class="text-decoration font-medium"
            style="color: #7e6afc; text-decoration: none;"
            onmouseover="this.style.color='#FACC15'; this.style.textDecoration='underline';"
            onmouseout="this.style.color='#7e6afc'; this.style.textDecoration='none';">
-           #Digital Twin
+           #Data Science
+        </a>
+      
+        <a href="/tags/machine-learning" 
+           class="text-decoration font-medium"
+           style="color: #7e6afc; text-decoration: none;"
+           onmouseover="this.style.color='#FACC15'; this.style.textDecoration='underline';"
+           onmouseout="this.style.color='#7e6afc'; this.style.textDecoration='none';">
+           #Machine Learning
         </a>
       
         <a href="/tags/munich-germany" 
@@ -165,57 +181,114 @@
 
     
     <article class="prose prose-neutral max-w-none prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-8 prose-h2:mb-4 lightbox">
-      <h2 id="introduction">Introduction</h2>
-<p>This project is about developing an Indoor Ambient Monitoring system to manage and visualize human comfort relevant environmental parameters like temperature, humidity, illuminance, noise level, CO2 concentration, and others in an indoor environment. Further, the task is to study an insight on LoRaWAN Indoor Network Coverage.</p>
-<p><img src="/images/pj2-1.webp" alt="Dashboard">
-<em><a href="https://xmruuu.github.io/25SS_IoT_Indoor-Ambient-Monitoring/">Open Dashboard</a></em></p>
-<h2 id="methods">Methods</h2>
-<p>The system architecture is divided into hardware and software components. On the hardware side, multiple indoor environmental sensors (measuring CO, PM2.5, temperature, humidity, etc.) transmit data via LoRa using the CayenneLPP encoding format through a LoRaWAN gateway to IoT cloud platforms such as TTN and SWM. On the software side, these platforms forward the data to the FROST Server via the standardized SensorThings API, where it is stored in MongoDB. Meanwhile, the semantic building model of TUM in CityGML LOD 3.0 is processed with FME and converted into Cesium-compatible 3D Tiles. Finally, JavaScript is used to fetch live or historical data from the FROST Server and MongoDB, integrating it into Cesium 3D visualizations and interactive dashboards for end-user applications.</p>
-<p><img src="/images/pj2-2.webp" alt="System Architecture">
-<em>Figure 1. System Architecture</em></p>
-<h2 id="sensor-architecture">Sensor Architecture</h2>
-<p><img src="/images/pj2-3.webp" alt="Sensor Architecture">
-<em>Figure 2. Sensor Architecture</em></p>
-<p><strong>Required hardware:</strong></p>
+      <p><img src="/images/pj13-3.png" alt="Multi-Modal RAG System">
+<em>Figure 1. Hybrid Rag</em></p>
+<h2 id="overview">Overview</h2>
+<p>This project explores a multi-modal RAG architecture for Digital Twin spatial reasoning. By synthesizing Neo4j-based IFC topologies, multi-version BIM comparisons, and PostGIS geospatial data, the framework enables context-aware AI interactions. The system integrates knowledge graph augmentation with vector similarity search to deliver precise reasoning across spatial, semantic, and temporal building data.</p>
+<p><img src="/images/pj13-2.webp" alt="Platform Architecture">
+<em>Figure 2. System Architecture</em></p>
+<h2 id="technical-data-structure">Technical Data Structure</h2>
+<h3 id="multi-modal-data-storage">Multi-Modal Data Storage</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Database</th>
+          <th>Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Neo4j (Graph DB)</strong></td>
+          <td>IFC-based spatial topologies, relationships, real-time status, graph traversal for RAG</td>
+      </tr>
+      <tr>
+          <td><strong>PostGIS (Spatial SQL)</strong></td>
+          <td>Geospatial layers, building footprints, environmental analytics</td>
+      </tr>
+      <tr>
+          <td><strong>Vector DB</strong></td>
+          <td>Semantic retrieval of documentation, historical reports, design intent</td>
+      </tr>
+  </tbody>
+</table>
+<p><img src="/images/pj13-1.png" alt="Neo4j Knowledge Graph">
+<em>Figure 3. Neo4j Knowledge Graph</em></p>
+<p><img src="/images/pj13-4.png" alt="Data Integration">
+<em>Figure 4. VC MAP for Geospatial Analysis</em></p>
+<h3 id="bim-gis-data-alignment">BIM-GIS Data Alignment</h3>
+<p><strong>Entity Anchoring:</strong> Implementation of a deterministic crosswalk table linking BIM GUIDs (<code>GlobalId</code>) and GIS GUIDs (<code>UUID</code>) to ensure synchronization between topological attributes and geospatial geometries.</p>
+<p><strong>Semantic Synthesis:</strong> Employs LLM-powered property flattening and string serialization of material layers to bridge natural language queries with structured BIM data.</p>
+<h2 id="system-architecture--orchestration">System Architecture &amp; Orchestration</h2>
+<h3 id="langgraph-orchestrator">LangGraph Orchestrator</h3>
+<p>The system utilizes a <strong>LangGraph Supervisor</strong> for intelligent intent routing. It dynamically dispatches queries to specific data tools:</p>
 <ul>
-<li>Mainboard — 1× <a href="https://wiki.seeedstudio.com/Seeeduino_LoRAWAN/">Seeeduino LoRaWAN</a></li>
-<li>Power — 1× <a href="https://akkuplus.de/Einzelzelle-634169-37-Volt-2000mAh-Li-Polymer">Battery 2000 mAh</a></li>
-<li>Temperature, Humidity, Pressure and Air Quality — <a href="https://wiki.seeedstudio.com/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680/">BME680 Bosch I2C Bus</a></li>
-<li>PM2.5 &amp; PM10 — <a href="https://wiki.seeedstudio.com/Grove-Laser_PM2.5_Sensor-HM3301/">Grove HM3301</a></li>
-<li>CO, NO₂, C2H5CH and VOC — <a href="https://wiki.seeedstudio.com/Grove-Multichannel-Gas-Sensor-V2/">Multichannel Gas Sensor V2</a></li>
+<li><strong>BIM Tool:</strong> Cypher queries for graph-based topology and occupancy</li>
+<li><strong>GIS Tool:</strong> Spatial SQL for geospatial analytics and proximity searches</li>
+<li><strong>RAG Tool:</strong> Vector retrieval for document-based evidence</li>
 </ul>
-<h2 id="environmental-monitoring">Environmental Monitoring</h2>
-<p>We designed a 3D equipment box and fabricated it using 3D printing to protect our sensors. The system was deployed in the BIM Lab (Room 4170) and operated for one week of data collection (10–17 July).</p>
-<p><img src="/images/pj2-4.webp" alt="Sensor Deployment">
-<em>Figure 3. Sensor Deployment</em></p>
-<p><img src="/images/pj2-5.webp" alt="BIM lab Room 4170">
-<em>Figure 4. BIM lab Room 4170</em></p>
-<h2 id="validation-of-dashboard-insights">Validation of Dashboard Insights</h2>
-<p>The dashboard aggregates a Cesium 3D context with time‑series charts and a comfort index, enabling spatiotemporal exploration of indoor conditions. Validation shows the system captures real‑world dynamics. A rain event on 16.07 aligns with a temperature drop and humidity spike; on 11–12.07, CO/NO₂ rise with occupancy/ventilation.</p>
-<p><img src="/images/pj2-6.webp" alt="Sensor Deployment">
-<em>Figure 4. Rain event – temperature drop and humidity spike (UTC)</em></p>
-<p><img src="/images/pj2-7.webp" alt="BIM lab Room 4170">
-<em>Figure 5. Occupancy/ventilation – CO and NO₂ increase (UTC)</em></p>
-<h2 id="conclusion">Conclusion</h2>
-<p>Overall, we successfully established an IoT-based indoor environmental monitoring system utilizing the LoRaWAN network. The complete pipeline was implemented, from sensor deployment and data acquisition to server integration and visualization. Furthermore, we developed a platform to extract and process data from the FROST server and visualize it within the Cesium environment, supporting time-series analysis. The system enables real-time monitoring of key indoor environmental indicators (e.g., CO, VOC, and humidity), thereby providing valuable insights into building performance and occupant comfort.</p>
-<h2 id="references">References</h2>
-<hr>
-<h2 id="references-1">References</h2>
-<div style="margin-bottom:0.8em; padding-left:2em; text-indent:-2em;">
-[1] Petäjäjärvi, J., Mikhaylov, K., Roivainen, A., Hanninen, T., & Pettissalo, M. (2017). Evaluation of LoRa LPWAN technology for indoor remote health and wellbeing monitoring. <i>International Journal of Wireless Information Networks, 24</i>(2), 153–165. https://doi.org/10.1007/s10776-017-0341-8
-</div>
-<div style="margin-bottom:0.8em; padding-left:2em; text-indent:-2em;">
-[2] Hsu, W.-L., Lin, C.-H., Wu, C.-T., Chiu, Y.-C., & Yeh, C.-H. (2020). Establishment of smart living environment control system. <i>Sensors and Materials, 32</i>(10), 3433–3447. https://doi.org/10.18494/SAM.2020.2919
-</div>
-<div style="margin-bottom:0.8em; padding-left:2em; text-indent:-2em;">
-[3] Kim, M., Zhang, Y., & Brown, T. (2023). New low-cost sensing network for indoor environmental monitoring and control in buildings. <i>Energy and Buildings, 293</i>, 113173. https://doi.org/10.1016/j.enbuild.2023.113173
-</div>
-<div style="margin-bottom:0.8em; padding-left:2em; text-indent:-2em;">
-[4] Yasin, A., Delaney, J., Cheng, C.-T., & Pang, T. Y. (2022). The design and implementation of an IoT sensor-based indoor air quality monitoring system using off-the-shelf devices. <i>Applied Sciences, 12</i>(18), 9450. https://doi.org/10.3390/app12189450
-</div>
-<div style="margin-bottom:0.8em; padding-left:2em; text-indent:-2em;">
-[5] Pereira, P. F. da C., & Broday, E. E. (2021). Determination of thermal comfort zones through comparative analysis between different characterization methods of thermally dissatisfied people. <i>Buildings, 11</i>(8), 320. https://doi.org/10.3390/buildings11080320
-</div>
+<h3 id="tech-stack">Tech Stack</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Layer</th>
+          <th>Technologies</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Frontend</strong></td>
+          <td>Next.js, React, TypeScript, Tailwind CSS</td>
+      </tr>
+      <tr>
+          <td><strong>Visualization</strong></td>
+          <td>CesiumJS (Geospatial), Speckle Viewer (BIM)</td>
+      </tr>
+      <tr>
+          <td><strong>Backend</strong></td>
+          <td>Python 3.10+, FastAPI (Async)</td>
+      </tr>
+      <tr>
+          <td><strong>ETL Pipeline</strong></td>
+          <td>IfcOpenShell, QGIS/Python, LangChain</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="etl-pipeline-details">ETL Pipeline Details</h4>
+<table>
+  <thead>
+      <tr>
+          <th>Component</th>
+          <th>Function</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>IfcOpenShell</strong></td>
+          <td>BIM data extraction</td>
+      </tr>
+      <tr>
+          <td><strong>QGIS / Python</strong></td>
+          <td>GIS processing</td>
+      </tr>
+      <tr>
+          <td><strong>LangChain</strong></td>
+          <td>Document chunking</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="versioning--evolution">Versioning &amp; Evolution</h2>
+<h3 id="temporal-context-management">Temporal Context Management</h3>
+<p>The platform manages the transition between building lifecycle stages through explicit graph relationships:</p>
+<ul>
+<li>
+<p><strong><code>EVOLVED_FROM</code> / <code>EVOLVED_TO</code>:</strong> Bidirectional links that track the evolution of spaces (Merge, Split, Update, or Delete) between As-built and Proposed models.</p>
+</li>
+<li>
+<p><strong>Semantic Isolation:</strong> Separates historical context from future design intent to prevent data contamination during AI reasoning and retrieval.
+<img src="/images/pj13-5.png" alt="Data Integration">
+<em>Figure 5. Facade Paramatric Design</em></p>
+</li>
+</ul>
 
     </article>
     

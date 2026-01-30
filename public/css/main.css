@@ -335,6 +335,9 @@
   .hidden {
     display: none;
   }
+  .table {
+    display: table;
+  }
   .h-48 {
     height: calc(var(--spacing) * 48);
   }
@@ -894,6 +897,31 @@ html {
 .prose ol li {
   margin-bottom: 0.5rem;
   line-height: 1.6;
+}
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+.prose thead {
+  background-color: #f3f4f6;
+  border-bottom: 2px solid #e5e7eb;
+}
+.prose th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+}
+.prose td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: #4b5563;
+}
+.prose tbody tr:hover {
+  background-color: #f9fafb;
 }
 @media (max-width: 768px) {
   .bg-text {
