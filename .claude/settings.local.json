@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "Bash(for i in:*)",
+      "Bash(do python scripts/generate_single_project.py $i)",
+      "Bash(done)"
+    ]
+  }
+}

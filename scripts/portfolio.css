@@ -1,0 +1,426 @@
+/* Portfolio PDF Stylesheet */
+
+/* Page Setup */
+@page {
+    size: A4;
+    margin: 2cm 2.5cm;
+
+    @bottom-center {
+        content: counter(page);
+        font-family: 'Segoe UI', Arial, sans-serif;
+        font-size: 10pt;
+        color: #666;
+    }
+}
+
+@page :first {
+    @bottom-center {
+        content: none;
+    }
+}
+
+@page cover {
+    margin: 0;
+    @bottom-center {
+        content: none;
+    }
+}
+
+@page toc {
+    @bottom-center {
+        content: none;
+    }
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Noto Sans TC', Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cover Page */
+.cover-page {
+    page: cover;
+    page-break-after: always;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white;
+    text-align: center;
+}
+
+.cover-content {
+    padding: 3cm;
+}
+
+.cover-title {
+    font-size: 48pt;
+    font-weight: 300;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin: 0 0 1cm 0;
+}
+
+.cover-divider {
+    width: 100px;
+    height: 3px;
+    background: #e94560;
+    margin: 1cm auto;
+}
+
+.cover-author {
+    font-size: 24pt;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin: 1cm 0 0.5cm 0;
+}
+
+.cover-subtitle {
+    font-size: 12pt;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 0.3cm 0;
+    opacity: 0.9;
+}
+
+.cover-date {
+    font-size: 11pt;
+    margin-top: 2cm;
+    opacity: 0.7;
+}
+
+/* Table of Contents */
+.toc-page {
+    page: toc;
+    page-break-after: always;
+    padding: 1cm 0;
+}
+
+.toc-header {
+    font-size: 28pt;
+    font-weight: 300;
+    color: #1a1a2e;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 1.5cm;
+    padding-bottom: 0.5cm;
+    border-bottom: 2px solid #e94560;
+}
+
+.toc-list {
+    margin: 0;
+    padding: 0;
+}
+
+.toc-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.6cm;
+    padding: 0.3cm 0;
+    border-bottom: 1px solid #eee;
+}
+
+.toc-number {
+    font-size: 14pt;
+    font-weight: 600;
+    color: #e94560;
+    min-width: 1.2cm;
+}
+
+.toc-text {
+    flex: 1;
+}
+
+.toc-title {
+    font-size: 11pt;
+    font-weight: 500;
+    color: #333;
+    display: block;
+}
+
+.toc-subtitle {
+    font-size: 9pt;
+    color: #666;
+    display: block;
+    margin-top: 2px;
+}
+
+/* Project Pages */
+.project-page {
+    page-break-before: always;
+    padding-top: 0.5cm;
+}
+
+.project-header {
+    margin-bottom: 1cm;
+    padding-bottom: 0.5cm;
+    border-bottom: 2px solid #e94560;
+}
+
+.project-number {
+    font-size: 36pt;
+    font-weight: 700;
+    color: #e94560;
+    opacity: 0.3;
+    margin-bottom: -0.5cm;
+}
+
+.project-title {
+    font-size: 20pt;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin: 0 0 0.3cm 0;
+    line-height: 1.3;
+}
+
+.project-subtitle {
+    font-size: 12pt;
+    font-weight: 400;
+    color: #666;
+    margin: 0 0 0.3cm 0;
+    font-style: italic;
+}
+
+.project-tags {
+    font-size: 8pt;
+    color: #888;
+    margin-bottom: 0.5cm;
+}
+
+.project-meta {
+    background: #f8f9fa;
+    padding: 0.4cm;
+    border-radius: 4px;
+    font-size: 9pt;
+    margin-top: 0.5cm;
+}
+
+.meta-item {
+    margin-bottom: 0.15cm;
+}
+
+.meta-item:last-child {
+    margin-bottom: 0;
+}
+
+.meta-item strong {
+    color: #1a1a2e;
+}
+
+/* Content Styles */
+.project-content {
+    font-size: 10pt;
+    line-height: 1.7;
+}
+
+.project-content h2 {
+    font-size: 14pt;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin: 1cm 0 0.4cm 0;
+    padding-bottom: 0.2cm;
+    border-bottom: 1px solid #ddd;
+}
+
+.project-content h3 {
+    font-size: 12pt;
+    font-weight: 600;
+    color: #333;
+    margin: 0.7cm 0 0.3cm 0;
+}
+
+.project-content h4 {
+    font-size: 11pt;
+    font-weight: 600;
+    color: #444;
+    margin: 0.5cm 0 0.2cm 0;
+}
+
+.project-content p {
+    margin: 0.3cm 0;
+    text-align: justify;
+}
+
+.project-content ul, .project-content ol {
+    margin: 0.3cm 0;
+    padding-left: 0.8cm;
+}
+
+.project-content li {
+    margin-bottom: 0.15cm;
+}
+
+/* Images */
+.project-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.5cm auto;
+    border-radius: 4px;
+}
+
+.project-content p > img:only-child {
+    margin: 0.5cm auto;
+}
+
+/* Figure captions (italics after images) */
+.project-content p em:only-child {
+    display: block;
+    text-align: center;
+    font-size: 9pt;
+    color: #666;
+    margin-top: -0.3cm;
+    margin-bottom: 0.5cm;
+}
+
+/* Flex container for side-by-side images */
+.not-prose,
+div[style*="display: flex"],
+div[style*="display:flex"] {
+    display: flex;
+    gap: 0.5cm;
+    margin: 0.5cm 0;
+    justify-content: center;
+}
+
+.not-prose > div,
+div[style*="display: flex"] > div,
+div[style*="display:flex"] > div {
+    flex: 1;
+    text-align: center;
+}
+
+.not-prose img,
+div[style*="display: flex"] img,
+div[style*="display:flex"] img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+/* Tables */
+.project-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5cm 0;
+    font-size: 9pt;
+}
+
+.project-content th {
+    background: #1a1a2e;
+    color: white;
+    padding: 0.3cm;
+    text-align: left;
+    font-weight: 500;
+}
+
+.project-content td {
+    padding: 0.25cm 0.3cm;
+    border-bottom: 1px solid #ddd;
+}
+
+.project-content tr:nth-child(even) td {
+    background: #f8f9fa;
+}
+
+/* Code */
+.project-content code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 9pt;
+    background: #f4f4f4;
+    padding: 0.05cm 0.15cm;
+    border-radius: 3px;
+}
+
+.project-content pre {
+    background: #282c34;
+    color: #abb2bf;
+    padding: 0.4cm;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 8pt;
+    line-height: 1.5;
+}
+
+.project-content pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+}
+
+/* Blockquote */
+.project-content blockquote {
+    border-left: 3px solid #e94560;
+    margin: 0.5cm 0;
+    padding: 0.3cm 0.5cm;
+    background: #f8f9fa;
+    font-style: italic;
+}
+
+/* Links */
+.project-content a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+/* References section */
+.project-content div[style*="text-indent"] {
+    font-size: 8pt;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Iframe replacement note */
+.iframe-note {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    padding: 0.3cm;
+    border-radius: 4px;
+    font-size: 9pt;
+    text-align: center;
+}
+
+/* Horizontal rule */
+.project-content hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 0.5cm 0;
+}
+
+/* Bold text */
+.project-content strong {
+    font-weight: 600;
+    color: #1a1a2e;
+}
+
+/* Print optimizations */
+@media print {
+    .project-page {
+        page-break-inside: avoid;
+    }
+
+    .project-content img {
+        page-break-inside: avoid;
+        page-break-before: auto;
+        page-break-after: auto;
+    }
+
+    .project-content h2,
+    .project-content h3 {
+        page-break-after: avoid;
+    }
+
+    .project-content table {
+        page-break-inside: avoid;
+    }
+}

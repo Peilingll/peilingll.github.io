@@ -18,3 +18,6 @@ resources/_gen/
 # Temporary files
 *.log
 *.tmp
+
+# Generated portfolio PDFs (produced by scripts/)
+output/
