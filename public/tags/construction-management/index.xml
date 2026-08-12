@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Construction Management on PEILING SONG</title>
+    <link>http://localhost:1313/tags/construction-management/</link>
+    <description>Recent content in Construction Management on PEILING SONG</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/construction-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sunhou Intranet: ERP for an Architecture Practice</title>
+      <link>http://localhost:1313/projects/project14/</link>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/project14/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Sunhou Intranet is an operations system I designed and built for a 35-person architectural practice that runs two legal entities. It has been in production inside the firm since 2025.&lt;/p&gt;&#xA;&lt;p&gt;Before it existed, the firm&amp;rsquo;s operational information was spread across shared drives, spreadsheets, low-code mobile apps and paper. The system consolidates that into a single database under a single permission model, and adds a retrieval layer built on large language models on top of it.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
