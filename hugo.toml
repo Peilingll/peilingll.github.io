@@ -2,6 +2,9 @@ baseURL = 'https://peilingsong.org/'
 languageCode = 'en-us'
 title = 'PEILING SONG'
 
+[security.exec]
+  allow = ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']
+
 [build]
   [build.buildStats]
     enable = true
